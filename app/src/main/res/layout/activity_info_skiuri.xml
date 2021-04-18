@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoSkiuriActivity">
+
+    <TextView
+        android:id="@+id/textViewSkiAlese"
+        android:layout_width="0dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="308dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSkiAlese"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="@+id/textViewSkiAlese"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSkiAlese" />
+
+    <Button
+        android:id="@+id/buttonAlegeSkiuri"
+        android:layout_width="116dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="218dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="144dp"
+        android:text="Choose skis"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
