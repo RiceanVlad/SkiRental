@@ -13,7 +13,7 @@ class FirstActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFirstBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        var smth = 0;
         butoane()
     }
 
