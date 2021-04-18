@@ -11,7 +11,7 @@ class DataSource {
                 PerecheSki(
                     "Congratulations!",
                     "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
-                    "https://raw.githubusercontent.com/RiceanVlad/SkiRental/main/app/src/main/res/imaginiSchiuri/ski2.PNG",
+                    "https://raw.githubusercontent.com/RiceanVlad/SkiRental/main/app/src/main/res/imaginiSchiuri/ski1.PNG",
                     "Sally"
                 )
             )
