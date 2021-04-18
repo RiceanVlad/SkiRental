@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.skirental">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SkiRental">
-        <activity android:name=".SkiuriActivity"></activity>
+        <activity android:name=".InfoSkiuriActivity"></activity>
+        <activity android:name=".SkiuriActivity" />
         <activity android:name=".FirstActivity" />
         <activity android:name=".CreateAccount" />
         <activity android:name=".MainActivity">
