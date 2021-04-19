@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundskiinfo"
     tools:context=".InfoSkiuriActivity">
 
     <TextView
@@ -11,21 +12,24 @@
         android:layout_width="0dp"
         android:layout_height="123dp"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="148dp"
         android:layout_marginEnd="55dp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewUsername"
-        android:layout_width="308dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewSkiAlese"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="@+id/textViewSkiAlese"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSkiAlese" />
+        android:layout_width="303dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="4dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFirmaSki"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="@+id/textViewFirmaSki"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirmaSki" />
 
     <Button
         android:id="@+id/buttonAlegeSkiuri"
@@ -39,5 +43,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSkiInfo"
+        android:layout_width="248dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="134dp"
+        android:text="Ski information"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFirmaSki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Brand"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSkiAlese"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewSkiAlese"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSkiAlese" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
