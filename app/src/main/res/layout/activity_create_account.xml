@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundcreateacc"
     tools:context=".CreateAccount">
 
     <TextView
@@ -26,12 +27,162 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="248dp"
-        android:layout_marginEnd="73dp"
+        android:layout_marginEnd="43dp"
         android:text="Create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintVertical_bias="0.92" />
+
+    <EditText
+        android:id="@+id/editTextNume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="150dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <EditText
+        android:id="@+id/editTextVarsta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNume"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextNume"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNume" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextVarsta"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="@+id/editTextVarsta"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVarsta"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="F" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="M" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/textViewSex"
+        android:layout_width="35dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Sex"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextVarsta"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextVarsta"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVarsta" />
+
+    <EditText
+        android:id="@+id/editTextCreazaEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextVarsta"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextVarsta"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVarsta" />
+
+    <EditText
+        android:id="@+id/editTextInaltime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Height"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCreazaEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextCreazaEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCreazaEmail" />
+
+    <EditText
+        android:id="@+id/editTextMarimePicior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Foot size"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="@+id/editTextInaltime"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextInaltime"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInaltime" />
+
+    <EditText
+        android:id="@+id/editTextGreutate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Weight"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="@+id/editTextMarimePicior"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextMarimePicior"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMarimePicior" />
+
+    <EditText
+        android:id="@+id/editTextDificultate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Difficulty level"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextGreutate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextGreutate"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGreutate" />
+
+    <EditText
+        android:id="@+id/editTextParola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDificultate"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextDificultate"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDificultate" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

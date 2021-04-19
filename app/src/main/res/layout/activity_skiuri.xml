@@ -19,13 +19,13 @@
 
     <TextView
         android:id="@+id/textViewAlegeSchiuri"
-        android:layout_width="342dp"
-        android:layout_height="50dp"
+        android:layout_width="201dp"
+        android:layout_height="52dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="11dp"
-        android:text="      Alegeți schiuri"
+        android:text="Choose skis"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
