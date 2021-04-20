@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent);
         }
         binding.buttonCreateAccount.setOnClickListener{
-            val intent = Intent(this, CreateAccount::class.java)
+            val intent = Intent(this, CreateAccountActivity::class.java)
             startActivity(intent);
         }
     }

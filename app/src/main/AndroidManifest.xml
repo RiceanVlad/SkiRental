@@ -16,7 +16,7 @@
         <activity android:name=".InfoSkiuriActivity" />
         <activity android:name=".SkiuriActivity" />
         <activity android:name=".FirstActivity" />
-        <activity android:name=".CreateAccount" />
+        <activity android:name=".CreateAccountActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.skirental
+package com.example.skirental.miscellaneous
 
 import android.graphics.Rect
 import android.view.View

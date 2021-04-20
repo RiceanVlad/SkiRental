@@ -1,4 +1,4 @@
-package com.example.skirental
+package com.example.skirental.data
 
 import com.example.skirental.models.Clapari
 import com.example.skirental.models.PerecheSki
