@@ -1,5 +1,6 @@
 package com.example.skirental.data
 
+import com.example.skirental.models.Bete
 import com.example.skirental.models.Clapari
 import com.example.skirental.models.PerecheSki
 
@@ -75,6 +76,34 @@ class DataSource {
             )
             list.add(
                 Clapari(
+                    "Clapari Ski Unisex Scott Superguide Carbon 125 Lime Green/Black",
+                    "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
+                    "https://raw.githubusercontent.com/RiceanVlad/SkiRental/main/app/src/main/res/imaginiClapari/clapari3.jpg",
+                    "Scott Superguide"
+                )
+            )
+            return list
+        }
+        fun createDataSetBete(): ArrayList<Bete> {
+            var list = ArrayList<Bete>()
+            list.add(
+                Bete(
+                    "Salomon Clapari Ski S/PRO 90 Barbati Negru",
+                    "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
+                    "https://raw.githubusercontent.com/RiceanVlad/SkiRental/main/app/src/main/res/imaginiClapari/clapari1.jpg",
+                    "Salomon"
+                )
+            )
+            list.add(
+                Bete(
+                    "Clapari Tecnica Firebird WC 110 2019 Portocaliu",
+                    "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
+                    "https://raw.githubusercontent.com/RiceanVlad/SkiRental/main/app/src/main/res/imaginiClapari/clapari2.jpg",
+                    "Tecnica"
+                )
+            )
+            list.add(
+                Bete(
                     "Clapari Ski Unisex Scott Superguide Carbon 125 Lime Green/Black",
                     "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
                     "https://raw.githubusercontent.com/RiceanVlad/SkiRental/main/app/src/main/res/imaginiClapari/clapari3.jpg",
