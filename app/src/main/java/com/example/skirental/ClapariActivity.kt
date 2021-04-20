@@ -29,7 +29,7 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
     }
 
     private fun initRecyclerView(){
-        val recycler_view: RecyclerView = findViewById(R.id.recycler_view_bete)
+        val recycler_view: RecyclerView = findViewById(R.id.recycler_view_casca)
         recycler_view.layoutManager = LinearLayoutManager(this@ClapariActivity)
         val topSpacingDecoration = TopSpacingItemDecoration(30)
         recycler_view.addItemDecoration(topSpacingDecoration)
