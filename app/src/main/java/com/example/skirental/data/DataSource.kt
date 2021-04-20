@@ -1,9 +1,6 @@
 package com.example.skirental.data
 
-import com.example.skirental.models.Bete
-import com.example.skirental.models.Casca
-import com.example.skirental.models.Clapari
-import com.example.skirental.models.PerecheSki
+import com.example.skirental.models.*
 
 class DataSource {
 
@@ -133,6 +130,34 @@ class DataSource {
             )
             list.add(
                 Casca(
+                    "Clapari Ski Unisex Scott Superguide Carbon 125 Lime Green/Black",
+                    "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
+                    "https://raw.githubusercontent.com/RiceanVlad/SkiRental/main/app/src/main/res/imaginiClapari/clapari3.jpg",
+                    "Scott Superguide"
+                )
+            )
+            return list
+        }
+        fun createDataSetOchelari(): ArrayList<Ochelari> {
+            var list = ArrayList<Ochelari>()
+            list.add(
+                Ochelari(
+                    "Salomon Clapari Ski S/PRO 90 Barbati Negru",
+                    "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
+                    "https://raw.githubusercontent.com/RiceanVlad/SkiRental/main/app/src/main/res/imaginiClapari/clapari1.jpg",
+                    "Salomon"
+                )
+            )
+            list.add(
+                Ochelari(
+                    "Clapari Tecnica Firebird WC 110 2019 Portocaliu",
+                    "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
+                    "https://raw.githubusercontent.com/RiceanVlad/SkiRental/main/app/src/main/res/imaginiClapari/clapari2.jpg",
+                    "Tecnica"
+                )
+            )
+            list.add(
+                Ochelari(
                     "Clapari Ski Unisex Scott Superguide Carbon 125 Lime Green/Black",
                     "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
                     "https://raw.githubusercontent.com/RiceanVlad/SkiRental/main/app/src/main/res/imaginiClapari/clapari3.jpg",

@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SkiRental">
-        <activity android:name=".InfoCascaActivity"></activity>
+        <activity android:name=".InfoOchelariActivity"></activity>
+        <activity android:name=".OchelariActivity" />
+        <activity android:name=".InfoCascaActivity" />
         <activity android:name=".InfoBeteActivity" />
         <activity android:name=".CascaActivity" />
         <activity android:name=".BeteActivity" />
