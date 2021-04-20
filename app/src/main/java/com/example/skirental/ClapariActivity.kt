@@ -1,5 +1,6 @@
 package com.example.skirental
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -38,9 +39,9 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
         val clickedItem: Clapari = listaClapari[position]
         clapariAdapter.notifyItemChanged(position)
-//        val intent = Intent(this, InfoClapariActivity::class.java)
-//        intent.putExtra("titlu",clickedItem.title)
-//        intent.putExtra("username",clickedItem.username)
-//        startActivity(intent)
+        val intent = Intent(this, InfoClapariActivity::class.java)
+        intent.putExtra("titlu",clickedItem.title)
+        intent.putExtra("username",clickedItem.username)
+        startActivity(intent)
     }
 }
