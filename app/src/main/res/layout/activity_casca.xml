@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BeteActivity">
+    tools:context=".CascaActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_casca"
@@ -19,13 +19,13 @@
 
     <TextView
         android:id="@+id/textViewAlegeCasca"
-        android:layout_width="242dp"
-        android:layout_height="53dp"
+        android:layout_width="253dp"
+        android:layout_height="55dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="11dp"
-        android:text="Choose poles"
+        android:text="Choose Helmet"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/recycler_view_casca"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,4 +33,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
