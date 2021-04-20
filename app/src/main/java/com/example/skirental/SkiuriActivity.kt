@@ -6,6 +6,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.skirental.adapters.SkiuriRecyclerAdapter
+import com.example.skirental.data.DataSource
+import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.PerecheSki
 
 class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickListener {
