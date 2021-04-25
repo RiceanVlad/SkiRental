@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
 import com.example.skirental.models.PerecheSki
+import com.google.firebase.storage.FirebaseStorage
 
 class SkiuriRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -58,17 +59,23 @@ class SkiuriRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
 
         fun bind(perecheSkiuri: PerecheSki){
 
-            blogTitle.setText(perecheSkiuri.title)
-            blogAuthor.setText(perecheSkiuri.username)
+            val storage = FirebaseStorage.getInstance()
+            val storageRef = storage.reference
+            var imagesRef = storageRef.child("schiuri/${perecheSkiuri.imagine}.jpg")
+
+            blogTitle.setText(perecheSkiuri.firma)
+            blogAuthor.setText(perecheSkiuri.descriere)
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
 
-            Glide.with(itemView.context)
-                .applyDefaultRequestOptions(requestOptions)
-                .load(perecheSkiuri.image)
-                .into(blogImage)
+            imagesRef.downloadUrl.addOnSuccessListener {
+                Glide.with(itemView.context)
+                        .applyDefaultRequestOptions(requestOptions)
+                        .load(it)
+                        .into(blogImage)
+            }
         }
 
     }

@@ -1,4 +1,4 @@
-package com.example.skirental
+package com.example.skirental.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -19,8 +19,12 @@ class FirstActivity : AppCompatActivity() {
 
     private fun butoane(){
         binding.buttonRentSkiEquipment.setOnClickListener(){
-            val intent = Intent(this, SkiuriActivity::class.java)
-            startActivity(intent);
+            val intent1 = Intent(this, SkiuriActivity::class.java)
+            intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+            intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+            intent1.putExtra("sex",intent.getStringExtra("sex"))
+            intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+            startActivity(intent1);
         }
     }
 }

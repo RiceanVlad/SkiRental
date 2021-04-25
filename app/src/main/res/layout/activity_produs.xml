@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.OchelariActivity">
+    tools:context=".activities.ProdusActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_ochelari"
+        android:id="@+id/recycler_view_produs"
         android:layout_width="411dp"
         android:layout_height="597dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,20 +18,32 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textViewAlegeOchelari"
-        android:layout_width="375dp"
-        android:layout_height="62dp"
+        android:id="@+id/textViewTitluProdus"
+        android:layout_width="281dp"
+        android:layout_height="54dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="11dp"
-        android:text="Choose snow goggles"
+        android:text="Items in your bag"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/recycler_view_ochelari"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_view_produs"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonFinalizareComanda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.749"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.853"
+        app:srcCompat="@android:drawable/ic_menu_send" />
 </androidx.constraintlayout.widget.ConstraintLayout>

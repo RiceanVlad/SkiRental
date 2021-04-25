@@ -1,8 +1,9 @@
-package com.example.skirental
+package com.example.skirental.infoactivities
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.skirental.activities.ProdusActivity
 import com.example.skirental.databinding.ActivityInfoOchelariBinding
 
 class InfoOchelariActivity : AppCompatActivity() {
@@ -19,7 +20,12 @@ class InfoOchelariActivity : AppCompatActivity() {
 
     private fun butoane(){
         binding.buttonAlegeOchelari.setOnClickListener(){
-            Toast.makeText(this, "click", Toast.LENGTH_SHORT).show()
+            var intent1 = Intent(this, ProdusActivity::class.java)
+            intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+            intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+            intent1.putExtra("sex",intent.getStringExtra("sex"))
+            intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+            startActivity(intent1)
         }
     }
 }

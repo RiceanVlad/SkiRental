@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "972563854414",
+    "firebase_url": "https://skirental-4f1db-default-rtdb.firebaseio.com",
+    "project_id": "skirental-4f1db",
+    "storage_bucket": "skirental-4f1db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972563854414:android:14a278a30769df7b033f1f",
+        "android_client_info": {
+          "package_name": "com.example.firebasetestschiuri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972563854414-j5ocpuhfechnnt8c7amqr1p10p35s3ou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2YoN7rmqWW4zqHCYCu-ZscYNFkAtbKZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972563854414-j5ocpuhfechnnt8c7amqr1p10p35s3ou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972563854414:android:c7aa692ffdc42299033f1f",
+        "android_client_info": {
+          "package_name": "com.example.skirental"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972563854414-j5ocpuhfechnnt8c7amqr1p10p35s3ou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2YoN7rmqWW4zqHCYCu-ZscYNFkAtbKZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972563854414-j5ocpuhfechnnt8c7amqr1p10p35s3ou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
