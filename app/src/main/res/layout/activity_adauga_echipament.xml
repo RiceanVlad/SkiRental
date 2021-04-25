@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".administrator.AdaugaEchipamentActivity">
+
+    <Button
+        android:id="@+id/buttonAdaugaSchiuri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="154dp"
+        android:text="Add skis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAdaugaClapari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="add boots"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAdaugaSchiuri"
+        app:layout_constraintStart_toStartOf="@+id/buttonAdaugaSchiuri"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdaugaSchiuri" />
+
+    <Button
+        android:id="@+id/buttonAdaugaBete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="add poles"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAdaugaClapari"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonAdaugaClapari"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdaugaClapari" />
+
+    <Button
+        android:id="@+id/buttonAdaugaCasti"
+        android:layout_width="139dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:text="add helmet"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAdaugaBete"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="@+id/buttonAdaugaBete"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdaugaBete" />
+
+    <Button
+        android:id="@+id/buttonAdaugaOchelari"
+        android:layout_width="146dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:text="add goggles"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAdaugaCasti"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="@+id/buttonAdaugaCasti"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdaugaCasti" />
+</androidx.constraintlayout.widget.ConstraintLayout>
