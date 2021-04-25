@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
 import com.example.skirental.models.Ochelari
+import com.google.firebase.storage.FirebaseStorage
 
 class OchelariRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -58,6 +59,11 @@ class OchelariRecyclerAdapter(private val listener: OnItemClickListener) : Recyc
 
         fun bind(ochelari: Ochelari){
 
+            val storage = FirebaseStorage.getInstance()
+            val storageRef = storage.reference
+            var imagesRef = storageRef.child("ochelari/${ochelari.imagine}.jpg")
+
+
             blogTitle.setText(ochelari.descriere)
             blogAuthor.setText(ochelari.firma)
 
@@ -65,10 +71,12 @@ class OchelariRecyclerAdapter(private val listener: OnItemClickListener) : Recyc
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
 
-            Glide.with(itemView.context)
-                .applyDefaultRequestOptions(requestOptions)
-                .load(ochelari.imagine)
-                .into(blogImage)
+            imagesRef.downloadUrl.addOnSuccessListener {
+                Glide.with(itemView.context)
+                        .applyDefaultRequestOptions(requestOptions)
+                        .load(it)
+                        .into(blogImage)
+            }
         }
 
     }
