@@ -20,8 +20,12 @@ class InfoOchelariActivity : AppCompatActivity() {
 
     private fun butoane(){
         binding.buttonAlegeOchelari.setOnClickListener(){
-            var intent = Intent(this, ProdusActivity::class.java)
-            startActivity(intent)
+            var intent1 = Intent(this, ProdusActivity::class.java)
+            intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+            intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+            intent1.putExtra("sex",intent.getStringExtra("sex"))
+            intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+            startActivity(intent1)
         }
     }
 }

@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
 import com.example.skirental.models.Casca
+import com.google.firebase.storage.FirebaseStorage
 
 class CascaRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -58,17 +59,23 @@ class CascaRecyclerAdapter(private val listener: OnItemClickListener) : Recycler
 
         fun bind(casca: Casca){
 
-            blogTitle.setText(casca.title)
-            blogAuthor.setText(casca.username)
+            val storage = FirebaseStorage.getInstance()
+            val storageRef = storage.reference
+            var imagesRef = storageRef.child("casti/${casca.imagine}.jpg")
+
+            blogTitle.setText(casca.descriere)
+            blogAuthor.setText(casca.firma)
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
 
-            Glide.with(itemView.context)
-                .applyDefaultRequestOptions(requestOptions)
-                .load(casca.image)
-                .into(blogImage)
+            imagesRef.downloadUrl.addOnSuccessListener {
+                Glide.with(itemView.context)
+                        .applyDefaultRequestOptions(requestOptions)
+                        .load(it)
+                        .into(blogImage)
+            }
         }
 
     }

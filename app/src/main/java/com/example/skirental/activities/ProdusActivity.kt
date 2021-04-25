@@ -7,14 +7,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skirental.R
 import com.example.skirental.adapters.ProdusRecyclerAdapter
-import com.example.skirental.data.DataSource
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Produs
 
 class ProdusActivity : AppCompatActivity(), ProdusRecyclerAdapter.OnItemClickListener {
 
     private lateinit var produsAdapter: ProdusRecyclerAdapter
-    private var listaProdus = DataSource.createDataSetProdus()
+    private var listaProdus = ArrayList<Produs>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

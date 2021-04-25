@@ -58,8 +58,8 @@ class ProdusRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
 
         fun bind(produs: Produs){
 
-            blogTitle.setText(produs.title)
-            blogAuthor.setText(produs.username)
+            blogTitle.setText(produs.descriere)
+            blogAuthor.setText(produs.firma)
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
@@ -67,7 +67,7 @@ class ProdusRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
 
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(produs.image)
+                .load(produs.imagine)
                 .into(blogImage)
         }
 

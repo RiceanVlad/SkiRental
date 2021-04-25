@@ -2,28 +2,63 @@ package com.example.skirental.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skirental.R
 import com.example.skirental.adapters.CascaRecyclerAdapter
-import com.example.skirental.data.DataSource
 import com.example.skirental.infoactivities.InfoCascaActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Casca
+import com.google.firebase.firestore.FirebaseFirestore
 
 class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListener {
 
     private lateinit var cascaAdapter: CascaRecyclerAdapter
-    private var listaCasca = DataSource.createDataSetCasca()
+    private var listaCasti = ArrayList<Casca>()
+    val db = FirebaseFirestore.getInstance()
+    private val TAG = "vlad"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_casca)
 
-        initRecyclerView()
-        addDataSet(listaCasca)
+        preiaCastiDinBD()
+    }
+
+    private fun preiaCastiDinBD(){
+        val sem : Boolean = false
+        var adult : Boolean
+        val varsta = intent.getStringExtra("varsta").toString().toInt()
+
+        if(varsta<18)
+            adult = false
+        else
+            adult = true
+
+        db.collection("casti")
+                .whereEqualTo("inchiriat", sem)
+                .whereEqualTo("adulti",adult)
+                .get()
+                .addOnSuccessListener { documents ->
+                    if(documents.size() != 0){
+                        for(document in documents){
+                            val casca = Casca(document.get("firma").toString(),
+                                    document.get("descriere").toString(),
+                                    document.id)
+                            listaCasti.add(casca)
+                        }
+                        initRecyclerView()
+                        addDataSet(listaCasti)
+                    } else{
+                        Toast.makeText(this, "There are no helmets available.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                .addOnFailureListener{ exception ->
+                    Log.w(TAG,"Error getting documents: ", exception)
+                }
     }
 
     private fun addDataSet(data: ArrayList<Casca>){
@@ -42,11 +77,13 @@ class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListe
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
-        val clickedItem: Casca = listaCasca[position]
+        val clickedItem: Casca = listaCasti[position]
         cascaAdapter.notifyItemChanged(position)
-        val intent = Intent(this, InfoCascaActivity::class.java)
-        intent.putExtra("titlu",clickedItem.title)
-        intent.putExtra("username",clickedItem.username)
-        startActivity(intent)
+        val intent1 = Intent(this, InfoCascaActivity::class.java)
+        intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+        intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+        intent1.putExtra("sex",intent.getStringExtra("sex"))
+        intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+        startActivity(intent1)
     }
 }

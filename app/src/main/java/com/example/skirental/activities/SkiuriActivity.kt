@@ -83,9 +83,11 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
         val clickedItem: PerecheSki = listaSkiuri[position]
         skiuriAdapter.notifyItemChanged(position)
-        val intent = Intent(this, InfoSkiuriActivity::class.java)
-        intent.putExtra("titlu",clickedItem.descriere)
-        intent.putExtra("username",clickedItem.firma)
-        startActivity(intent)
+        val intent1 = Intent(this, InfoSkiuriActivity::class.java)
+        intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+        intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+        intent1.putExtra("sex",intent.getStringExtra("sex"))
+        intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+        startActivity(intent1)
     }
 }

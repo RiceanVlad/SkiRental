@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
 import com.example.skirental.models.Clapari
+import com.google.firebase.storage.FirebaseStorage
 
 class ClapariRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -58,17 +59,23 @@ class ClapariRecyclerAdapter(private val listener: OnItemClickListener) : Recycl
 
         fun bind(clapari: Clapari){
 
-            blogTitle.setText(clapari.title)
-            blogAuthor.setText(clapari.username)
+            val storage = FirebaseStorage.getInstance()
+            val storageRef = storage.reference
+            var imagesRef = storageRef.child("clapari/${clapari.imagine}.jpg")
+
+            blogTitle.setText(clapari.descriere)
+            blogAuthor.setText(clapari.firma)
 
             val requestOptions = RequestOptions()
-                .placeholder(R.drawable.ic_launcher_background)
-                .error(R.drawable.ic_launcher_background)
+                    .placeholder(R.drawable.ic_launcher_background)
+                    .error(R.drawable.ic_launcher_background)
 
-            Glide.with(itemView.context)
-                .applyDefaultRequestOptions(requestOptions)
-                .load(clapari.image)
-                .into(blogImage)
+            imagesRef.downloadUrl.addOnSuccessListener {
+                Glide.with(itemView.context)
+                        .applyDefaultRequestOptions(requestOptions)
+                        .load(it)
+                        .into(blogImage)
+            }
         }
 
     }

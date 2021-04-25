@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
 import com.example.skirental.models.Bete
+import com.google.firebase.storage.FirebaseStorage
 
 class BeteRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -58,17 +59,23 @@ class BeteRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerV
 
         fun bind(bete: Bete){
 
-            blogTitle.setText(bete.title)
-            blogAuthor.setText(bete.username)
+            val storage = FirebaseStorage.getInstance()
+            val storageRef = storage.reference
+            var imagesRef = storageRef.child("bete/${bete.imagine}.jpg")
+
+            blogTitle.setText(bete.descriere)
+            blogAuthor.setText(bete.firma)
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
 
-            Glide.with(itemView.context)
-                .applyDefaultRequestOptions(requestOptions)
-                .load(bete.image)
-                .into(blogImage)
+            imagesRef.downloadUrl.addOnSuccessListener {
+                Glide.with(itemView.context)
+                        .applyDefaultRequestOptions(requestOptions)
+                        .load(it)
+                        .into(blogImage)
+            }
         }
 
     }

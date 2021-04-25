@@ -22,8 +22,12 @@ class InfoClapariActivity : AppCompatActivity() {
     private fun butoane(){
         binding.buttonAlegeClapari.setOnClickListener(){
             Toast.makeText(this, "click", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, BeteActivity::class.java)
-            startActivity(intent)
+            val intent1 = Intent(this, BeteActivity::class.java)
+            intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+            intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+            intent1.putExtra("sex",intent.getStringExtra("sex"))
+            intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+            startActivity(intent1)
         }
     }
 }

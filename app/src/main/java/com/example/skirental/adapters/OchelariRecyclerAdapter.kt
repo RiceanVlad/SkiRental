@@ -58,8 +58,8 @@ class OchelariRecyclerAdapter(private val listener: OnItemClickListener) : Recyc
 
         fun bind(ochelari: Ochelari){
 
-            blogTitle.setText(ochelari.title)
-            blogAuthor.setText(ochelari.username)
+            blogTitle.setText(ochelari.descriere)
+            blogAuthor.setText(ochelari.firma)
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
@@ -67,7 +67,7 @@ class OchelariRecyclerAdapter(private val listener: OnItemClickListener) : Recyc
 
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(ochelari.image)
+                .load(ochelari.imagine)
                 .into(blogImage)
         }
 
