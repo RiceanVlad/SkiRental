@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="43dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="158dp"
         android:ems="10"
         android:hint="Brand"
@@ -39,7 +39,7 @@
         android:id="@+id/editTextDescriereAdaugareEchipament"
         android:layout_width="315dp"
         android:layout_height="134dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Description"
@@ -98,10 +98,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="234dp"
         android:layout_marginEnd="84dp"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="192dp"
         android:text="Add product"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -109,12 +110,33 @@
         android:layout_width="173dp"
         android:layout_height="42dp"
         android:layout_marginStart="123dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="123dp"
         android:text="Add product"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAlegeImagineProdus"
+        android:layout_width="116dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="228dp"
+        android:text="Choose image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewImagineProdus"
+        android:layout_width="130dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAlegeImagineProdus"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/buttonAlegeImagineProdus"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAlegeImagineProdus"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
