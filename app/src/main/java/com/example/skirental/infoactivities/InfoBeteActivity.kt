@@ -1,8 +1,9 @@
-package com.example.skirental
+package com.example.skirental.infoactivities
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.skirental.activities.CascaActivity
 import com.example.skirental.databinding.ActivityInfoBeteBinding
 
 class InfoBeteActivity : AppCompatActivity() {
@@ -19,7 +20,7 @@ class InfoBeteActivity : AppCompatActivity() {
 
     private fun butoane(){
         binding.buttonAlegeBete.setOnClickListener(){
-            var intent = Intent(this,CascaActivity::class.java)
+            var intent = Intent(this, CascaActivity::class.java)
             startActivity(intent)
         }
     }

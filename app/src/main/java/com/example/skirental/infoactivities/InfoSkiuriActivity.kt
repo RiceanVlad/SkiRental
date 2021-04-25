@@ -1,8 +1,9 @@
-package com.example.skirental
+package com.example.skirental.infoactivities
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.skirental.activities.ClapariActivity
 import com.example.skirental.databinding.ActivityInfoSkiuriBinding
 
 class InfoSkiuriActivity : AppCompatActivity() {
@@ -22,11 +23,11 @@ class InfoSkiuriActivity : AppCompatActivity() {
 
     private fun butoane(){
         binding.buttonAlegeSkiuri.setOnClickListener(){
-            val intent = Intent(this,ClapariActivity::class.java)
+            val intent = Intent(this, ClapariActivity::class.java)
             startActivity(intent)
         }
         binding.buttonSkipSchiuri.setOnClickListener(){
-            val intent = Intent(this,ClapariActivity::class.java)
+            val intent = Intent(this, ClapariActivity::class.java)
             startActivity(intent)
         }
     }

@@ -1,8 +1,9 @@
-package com.example.skirental
+package com.example.skirental.infoactivities
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.skirental.activities.OchelariActivity
 import com.example.skirental.databinding.ActivityInfoCascaBinding
 
 class InfoCascaActivity : AppCompatActivity() {
@@ -19,10 +20,8 @@ class InfoCascaActivity : AppCompatActivity() {
 
     private fun butoane(){
         binding.buttonAlegeCasca.setOnClickListener(){
-            binding.buttonAlegeCasca.setOnClickListener(){
-                var intent = Intent(this,OchelariActivity::class.java)
-                startActivity(intent)
-            }
+            var intent = Intent(this, OchelariActivity::class.java)
+            startActivity(intent)
         }
     }
 }

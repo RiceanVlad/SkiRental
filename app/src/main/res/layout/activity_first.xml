@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundskiactivity"
-    tools:context=".FirstActivity">
+    tools:context=".activities.FirstActivity">
 
     <TextView
         android:id="@+id/textViewWelcome"
@@ -35,4 +35,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonModificareDatePersonale"
+        android:layout_width="162dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="80dp"
+        android:text="Modify personal data"
+        app:layout_constraintEnd_toEndOf="@+id/buttonRentSkiEquipment"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/buttonRentSkiEquipment"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRentSkiEquipment" />
 </androidx.constraintlayout.widget.ConstraintLayout>

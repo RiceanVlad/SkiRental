@@ -1,4 +1,4 @@
-package com.example.skirental
+package com.example.skirental.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,43 +6,45 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.skirental.adapters.CascaRecyclerAdapter
+import com.example.skirental.R
+import com.example.skirental.adapters.BeteRecyclerAdapter
 import com.example.skirental.data.DataSource
+import com.example.skirental.infoactivities.InfoBeteActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
-import com.example.skirental.models.Casca
+import com.example.skirental.models.Bete
 
-class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListener {
+class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListener {
 
-    private lateinit var cascaAdapter: CascaRecyclerAdapter
-    private var listaCasca = DataSource.createDataSetCasca()
+    private lateinit var beteAdapter: BeteRecyclerAdapter
+    private var listaBete = DataSource.createDataSetBete()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_casca)
+        setContentView(R.layout.activity_bete)
 
         initRecyclerView()
-        addDataSet(listaCasca)
+        addDataSet(listaBete)
     }
 
-    private fun addDataSet(data: ArrayList<Casca>){
-        cascaAdapter.submitList(data)
+    private fun addDataSet(data: ArrayList<Bete>){
+        beteAdapter.submitList(data)
     }
 
     private fun initRecyclerView(){
         val recycler_view: RecyclerView = findViewById(R.id.recycler_view_casca)
-        recycler_view.layoutManager = LinearLayoutManager(this@CascaActivity)
+        recycler_view.layoutManager = LinearLayoutManager(this@BeteActivity)
         val topSpacingDecoration = TopSpacingItemDecoration(30)
         recycler_view.addItemDecoration(topSpacingDecoration)
-        cascaAdapter = CascaRecyclerAdapter(this)
-        recycler_view.adapter = cascaAdapter
+        beteAdapter = BeteRecyclerAdapter(this)
+        recycler_view.adapter = beteAdapter
 
     }
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
-        val clickedItem: Casca = listaCasca[position]
-        cascaAdapter.notifyItemChanged(position)
-        val intent = Intent(this, InfoCascaActivity::class.java)
+        val clickedItem: Bete = listaBete[position]
+        beteAdapter.notifyItemChanged(position)
+        val intent = Intent(this, InfoBeteActivity::class.java)
         intent.putExtra("titlu",clickedItem.title)
         intent.putExtra("username",clickedItem.username)
         startActivity(intent)

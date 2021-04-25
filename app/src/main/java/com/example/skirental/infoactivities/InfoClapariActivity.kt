@@ -1,9 +1,10 @@
-package com.example.skirental
+package com.example.skirental.infoactivities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.skirental.activities.BeteActivity
 import com.example.skirental.databinding.ActivityInfoClapariBinding
 
 class InfoClapariActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class InfoClapariActivity : AppCompatActivity() {
     private fun butoane(){
         binding.buttonAlegeClapari.setOnClickListener(){
             Toast.makeText(this, "click", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this,BeteActivity::class.java)
+            val intent = Intent(this, BeteActivity::class.java)
             startActivity(intent)
         }
     }

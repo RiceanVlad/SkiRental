@@ -9,22 +9,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
-import com.example.skirental.models.PerecheSki
-import com.google.firebase.storage.FirebaseStorage
+import com.example.skirental.models.Produs
 
-class SkiuriRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ProdusRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items: List<PerecheSki> = ArrayList()
+    private var items: List<Produs> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return SkiuriViewHolder(
+        return ProdusViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.layout_item, parent, false)
         )
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
-            is SkiuriViewHolder -> {
+            is ProdusViewHolder -> {
                 holder.bind(items.get(position))
             }
         }
@@ -34,11 +33,11 @@ class SkiuriRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
         return items.size
     }
 
-    fun submitList(blogList: List<PerecheSki>){
+    fun submitList(blogList: List<Produs>){
         items = blogList
     }
 
-    inner class SkiuriViewHolder constructor(
+    inner class ProdusViewHolder constructor(
         itemView: View
     ): RecyclerView.ViewHolder(itemView),
         View.OnClickListener{
@@ -57,25 +56,19 @@ class SkiuriRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
             }
         }
 
-        fun bind(perecheSkiuri: PerecheSki){
+        fun bind(produs: Produs){
 
-            val storage = FirebaseStorage.getInstance()
-            val storageRef = storage.reference
-            var imagesRef = storageRef.child("schiuri/${perecheSkiuri.imagine}.jpg")
-
-            blogTitle.setText(perecheSkiuri.firma)
-            blogAuthor.setText(perecheSkiuri.descriere)
+            blogTitle.setText(produs.title)
+            blogAuthor.setText(produs.username)
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
 
-            imagesRef.downloadUrl.addOnSuccessListener {
-                Glide.with(itemView.context)
-                        .applyDefaultRequestOptions(requestOptions)
-                        .load(it)
-                        .into(blogImage)
-            }
+            Glide.with(itemView.context)
+                .applyDefaultRequestOptions(requestOptions)
+                .load(produs.image)
+                .into(blogImage)
         }
 
     }

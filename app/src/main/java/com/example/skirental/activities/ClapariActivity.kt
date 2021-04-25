@@ -1,4 +1,4 @@
-package com.example.skirental
+package com.example.skirental.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.skirental.R
 import com.example.skirental.adapters.ClapariRecyclerAdapter
 import com.example.skirental.data.DataSource
+import com.example.skirental.infoactivities.InfoClapariActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Clapari
 
