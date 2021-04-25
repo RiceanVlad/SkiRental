@@ -1,18 +1,24 @@
 package com.example.skirental.administrator
 
+import android.app.Activity
+import android.app.ProgressDialog
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.R
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_formular_adaugare.*
 
 class FormularAdaugareActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
-
     private val TAG = "vlad"
+    lateinit var filepath : Uri
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +34,9 @@ class FormularAdaugareActivity : AppCompatActivity() {
         buttonAdaugaProdus.setOnClickListener {
             if(intent.getStringExtra("produs").equals("schiuri"))
                 adaugaSchiuri()
+        }
+        buttonAlegeImagineProdus.setOnClickListener {
+            startFileChooser()
         }
     }
 
@@ -46,7 +55,9 @@ class FormularAdaugareActivity : AppCompatActivity() {
 
         )
         Toast.makeText(this, "Skis registrated succesfully.", Toast.LENGTH_SHORT).show()
-        ref.document().set(data)
+        val key : String = ref.document().id
+        ref.document(key).set(data)
+        uploadFile(key)
     }
 
     private fun seteazaVizibilitate() { // 1 - schiuri + bete
@@ -68,6 +79,45 @@ class FormularAdaugareActivity : AppCompatActivity() {
             editTextMarimeClapar.visibility = View.VISIBLE
             editTextLungime.visibility = View.INVISIBLE
             chipGroupCascaOchelari.visibility = View.INVISIBLE
+        }
+    }
+
+    private fun uploadFile(key : String) {
+        if(filepath!=null){
+            var pd = ProgressDialog(this)
+            pd.setTitle("Uploading")
+            pd.show()
+
+            var imageRef = FirebaseStorage.getInstance().reference.child("schiuri/$key.jpg")
+            imageRef.putFile(filepath)
+                .addOnSuccessListener { p0 ->
+                    pd.dismiss()
+                    Toast.makeText(applicationContext, "File Uploaded", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener{ p0 ->
+                    pd.dismiss()
+                    Toast.makeText(applicationContext, p0.message, Toast.LENGTH_SHORT).show()
+                }
+                .addOnProgressListener { p0 ->
+                    var progress = (100.0 * p0.bytesTransferred / p0.totalByteCount)
+                    pd.setMessage("Uploaded ${progress.toInt()}%")
+                }
+        }
+    }
+
+    private fun startFileChooser() {
+        var intent = Intent()
+        intent.setType("image/*")
+        intent.setAction(Intent.ACTION_GET_CONTENT)
+        startActivityForResult(Intent.createChooser(intent,"Choose Picture"),111)
+
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode==111 && resultCode== Activity.RESULT_OK && data != null){
+            filepath = data.data!!
+            var bitmap = MediaStore.Images.Media.getBitmap(contentResolver,filepath)
+            imageViewImagineProdus.setImageBitmap(bitmap)
         }
     }
 }
