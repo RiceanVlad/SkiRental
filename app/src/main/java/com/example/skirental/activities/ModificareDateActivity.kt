@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.skirental.MainActivity
 import com.example.skirental.R
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_modificare_date.*
@@ -41,7 +42,7 @@ class ModificareDateActivity : AppCompatActivity() {
                         editTextParolaM.setText(document.get("parola").toString())
                         editTextInaltimeM.setText(document.get("inaltime").toString())
                         var sex = true
-                        var str = document.get("sex").toString()
+                        val str = document.get("sex").toString()
                         if(str.equals("false"))
                             sex = false
                         if(sex)
@@ -63,9 +64,9 @@ class ModificareDateActivity : AppCompatActivity() {
 
             updateInBD()
 
-            Toast.makeText(this, "Account successfully updated!", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this,FirstActivity::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "Account successfully updated!", Toast.LENGTH_LONG).show()
+            val intent1 = Intent(this,MainActivity::class.java)
+            startActivity(intent1)
         }
     }
 
