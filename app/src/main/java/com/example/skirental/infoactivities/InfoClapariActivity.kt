@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.activities.BeteActivity
 import com.example.skirental.databinding.ActivityInfoClapariBinding
+import com.example.skirental.models.Produs
 
 class InfoClapariActivity : AppCompatActivity() {
 
@@ -27,6 +28,8 @@ class InfoClapariActivity : AppCompatActivity() {
             intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
             intent1.putExtra("sex",intent.getStringExtra("sex"))
             intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+            intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
+            intent1.putExtra("clapari",intent.getSerializableExtra("clapari") as? Produs)
             startActivity(intent1)
         }
     }

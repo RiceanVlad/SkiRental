@@ -11,19 +11,21 @@ import com.example.skirental.R
 import com.example.skirental.adapters.ClapariRecyclerAdapter
 import com.example.skirental.infoactivities.InfoClapariActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
-import com.example.skirental.models.Clapari
+import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickListener {
 
     private lateinit var clapariAdapter: ClapariRecyclerAdapter
-    private var listaClapari = ArrayList<Clapari>()
+    private var listaClapari = ArrayList<Produs>()
     val db = FirebaseFirestore.getInstance()
     private val TAG = "vlad"
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clapari)
+
+
 
         preiaClapariDinBD()
 
@@ -38,7 +40,7 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
                 .addOnSuccessListener { documents ->
                     if(documents.size() != 0){
                         for(document in documents){
-                            val clapari = Clapari(document.get("firma").toString(),
+                            val clapari = Produs(document.get("firma").toString(),
                                     document.get("descriere").toString(),
                                     document.id)
                             listaClapari.add(clapari)
@@ -54,12 +56,12 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
                 }
     }
 
-    private fun addDataSet(data: ArrayList<Clapari>){
+    private fun addDataSet(data: ArrayList<Produs>){
         clapariAdapter.submitList(data)
     }
 
     private fun initRecyclerView(){
-        val recycler_view: RecyclerView = findViewById(R.id.recycler_view_casca)
+        val recycler_view: RecyclerView = findViewById(R.id.recycler_view_clapari)
         recycler_view.layoutManager = LinearLayoutManager(this@ClapariActivity)
         val topSpacingDecoration = TopSpacingItemDecoration(30)
         recycler_view.addItemDecoration(topSpacingDecoration)
@@ -70,13 +72,15 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
-        val clickedItem: Clapari = listaClapari[position]
+        val clickedItem: Produs = listaClapari[position]
         clapariAdapter.notifyItemChanged(position)
         val intent1 = Intent(this, InfoClapariActivity::class.java)
         intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
         intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
         intent1.putExtra("sex",intent.getStringExtra("sex"))
         intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+        intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
+        intent1.putExtra("clapari",clickedItem)
         startActivity(intent1)
     }
 }

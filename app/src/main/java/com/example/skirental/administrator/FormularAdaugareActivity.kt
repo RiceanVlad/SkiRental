@@ -27,25 +27,101 @@ class FormularAdaugareActivity : AppCompatActivity() {
         seteazaVizibilitate()
 
         butoane()
-
     }
 
     private fun butoane() {
         buttonAdaugaProdus.setOnClickListener {
             if(intent.getStringExtra("produs").equals("schiuri"))
                 adaugaSchiuri()
+            if(intent.getStringExtra("produs").equals("clapari"))
+                adaugaClapari()
+            if(intent.getStringExtra("produs").equals("bete"))
+                adaugaBete()
+            if(intent.getStringExtra("produs").equals("casca"))
+                adaugaCasca()
+            if(intent.getStringExtra("produs").equals("ochelari"))
+                adaugaOchelari()
+
         }
         buttonAlegeImagineProdus.setOnClickListener {
             startFileChooser()
         }
     }
 
-    private fun adaugaSchiuri(){
-        val ref = db.collection("schiuri")
+    private fun adaugaOchelari() {
+        val ref = db.collection("ochelari")
 
-        var adult : Boolean = true
+        var adult = true;
         if(chipCopil.isChecked)
             adult = false
+
+        val data = hashMapOf(
+                "firma" to editTextFirma.text.toString(),
+                "descriere" to editTextDescriereAdaugareEchipament.text.toString(),
+                "inchiriat" to false,
+                "adulti" to adult
+
+        )
+        Toast.makeText(this, "Goggles registered succesfully.", Toast.LENGTH_SHORT).show()
+        val key : String = ref.document().id
+        ref.document(key).set(data)
+        uploadFile(key,"ochelari")
+    }
+
+    private fun adaugaCasca() {
+        val ref = db.collection("casti")
+
+        var adult = true;
+        if(chipCopil.isChecked)
+            adult = false
+
+        val data = hashMapOf(
+                "firma" to editTextFirma.text.toString(),
+                "descriere" to editTextDescriereAdaugareEchipament.text.toString(),
+                "inchiriat" to false,
+                "adulti" to adult
+
+        )
+        Toast.makeText(this, "Helmet registered succesfully.", Toast.LENGTH_SHORT).show()
+        val key : String = ref.document().id
+        ref.document(key).set(data)
+        uploadFile(key,"casti")
+    }
+
+    private fun adaugaBete() {
+        val ref = db.collection("bete")
+
+        val data = hashMapOf(
+                "firma" to editTextFirma.text.toString(),
+                "descriere" to editTextDescriereAdaugareEchipament.text.toString(),
+                "lungime" to editTextLungime.text.toString().toInt(),
+                "inchiriat" to false
+
+        )
+        Toast.makeText(this, "Poles registered succesfully.", Toast.LENGTH_SHORT).show()
+        val key : String = ref.document().id
+        ref.document(key).set(data)
+        uploadFile(key,"bete")
+    }
+
+    private fun adaugaClapari() {
+        val ref = db.collection("clapari")
+
+        val data = hashMapOf(
+                "firma" to editTextFirma.text.toString(),
+                "descriere" to editTextDescriereAdaugareEchipament.text.toString(),
+                "inchiriat" to false,
+                "marime" to editTextMarimeClapar.text.toString().toInt()
+
+        )
+        Toast.makeText(this, "Boots registered succesfully.", Toast.LENGTH_SHORT).show()
+        val key : String = ref.document().id
+        ref.document(key).set(data)
+        uploadFile(key,"clapari")
+    }
+
+    private fun adaugaSchiuri(){
+        val ref = db.collection("schiuri")
 
         val data = hashMapOf(
             "firma" to editTextFirma.text.toString(),
@@ -54,10 +130,10 @@ class FormularAdaugareActivity : AppCompatActivity() {
             "inchiriat" to false
 
         )
-        Toast.makeText(this, "Skis registrated succesfully.", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Skis registered succesfully.", Toast.LENGTH_SHORT).show()
         val key : String = ref.document().id
         ref.document(key).set(data)
-        uploadFile(key)
+        uploadFile(key,"schiuri")
     }
 
     private fun seteazaVizibilitate() { // 1 - schiuri + bete
@@ -82,13 +158,13 @@ class FormularAdaugareActivity : AppCompatActivity() {
         }
     }
 
-    private fun uploadFile(key : String) {
+    private fun uploadFile(key : String, dir : String) {
         if(filepath!=null){
             var pd = ProgressDialog(this)
             pd.setTitle("Uploading")
             pd.show()
 
-            var imageRef = FirebaseStorage.getInstance().reference.child("schiuri/$key.jpg")
+            var imageRef = FirebaseStorage.getInstance().reference.child("$dir/$key.jpg")
             imageRef.putFile(filepath)
                 .addOnSuccessListener { p0 ->
                     pd.dismiss()

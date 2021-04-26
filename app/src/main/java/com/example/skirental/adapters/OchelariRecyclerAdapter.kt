@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
-import com.example.skirental.models.Ochelari
+import com.example.skirental.models.Produs
 import com.google.firebase.storage.FirebaseStorage
 
 class OchelariRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items: List<Ochelari> = ArrayList()
+    private var items: List<Produs> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return OchelariViewHolder(
@@ -34,7 +34,7 @@ class OchelariRecyclerAdapter(private val listener: OnItemClickListener) : Recyc
         return items.size
     }
 
-    fun submitList(blogList: List<Ochelari>){
+    fun submitList(blogList: List<Produs>){
         items = blogList
     }
 
@@ -57,7 +57,7 @@ class OchelariRecyclerAdapter(private val listener: OnItemClickListener) : Recyc
             }
         }
 
-        fun bind(ochelari: Ochelari){
+        fun bind(ochelari: Produs){
 
             val storage = FirebaseStorage.getInstance()
             val storageRef = storage.reference

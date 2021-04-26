@@ -26,4 +26,15 @@
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonStergeEchipament"
+        android:layout_width="182dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="104dp"
+        android:text="Delete equipment"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAdaugaEchipament"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/buttonAdaugaEchipament"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdaugaEchipament" />
 </androidx.constraintlayout.widget.ConstraintLayout>
