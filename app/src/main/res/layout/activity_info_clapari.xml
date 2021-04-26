@@ -8,28 +8,62 @@
 
     <TextView
         android:id="@+id/textViewClapariInfo"
-        android:layout_width="113dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginEnd="177dp"
-        android:text="Boots information"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="248dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="77dp"
+        android:text="Ski information"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFirmaClapari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="287dp"
+        android:text="Brand"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewBrandClapariS"
+        android:layout_width="303dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFirmaClapari"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewFirmaClapari"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirmaClapari" />
+
+    <TextView
+        android:id="@+id/textViewClapariDescriere"
+        android:layout_width="304dp"
+        android:layout_height="187dp"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewBrandClapariS"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewBrandClapariS"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBrandClapariS" />
 
     <Button
         android:id="@+id/buttonAlegeClapari"
         android:layout_width="114dp"
         android:layout_height="69dp"
-        android:layout_marginStart="246dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="129dp"
         android:text="Choose boots"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.805" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

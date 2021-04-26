@@ -81,6 +81,9 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
         intent1.putExtra("varsta",intent.getStringExtra("varsta"))
         intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
         intent1.putExtra("clapari",clickedItem)
+        //trimit pt afisare info produs
+        intent1.putExtra("firma",clickedItem.firma)
+        intent1.putExtra("descriere",clickedItem.descriere)
         startActivity(intent1)
     }
 }

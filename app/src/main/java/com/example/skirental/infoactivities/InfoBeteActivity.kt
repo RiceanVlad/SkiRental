@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.activities.CascaActivity
 import com.example.skirental.databinding.ActivityInfoBeteBinding
 import com.example.skirental.models.Produs
+import kotlinx.android.synthetic.main.activity_info_bete.*
 
 class InfoBeteActivity : AppCompatActivity() {
 
@@ -15,6 +16,9 @@ class InfoBeteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInfoBeteBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        textViewBrandBeteS.setText(intent.getStringExtra("firma"))
+        textViewDescriereBete.setText(intent.getStringExtra("descriere"))
 
         butoane()
     }

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.activities.BeteActivity
 import com.example.skirental.databinding.ActivityInfoClapariBinding
 import com.example.skirental.models.Produs
+import kotlinx.android.synthetic.main.activity_info_clapari.*
 
 class InfoClapariActivity : AppCompatActivity() {
 
@@ -16,6 +17,9 @@ class InfoClapariActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInfoClapariBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        textViewBrandClapariS.setText(intent.getStringExtra("firma"))
+        textViewClapariDescriere.setText(intent.getStringExtra("descriere"))
 
         butoane()
     }

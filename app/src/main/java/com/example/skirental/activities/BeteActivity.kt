@@ -80,6 +80,9 @@ class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListene
         intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
         intent1.putExtra("clapari",intent.getSerializableExtra("clapari") as? Produs)
         intent1.putExtra("bete",clickedItem)
+        //trimit pt afisare info produs
+        intent1.putExtra("firma",clickedItem.firma)
+        intent1.putExtra("descriere",clickedItem.descriere)
         startActivity(intent1)
     }
 }

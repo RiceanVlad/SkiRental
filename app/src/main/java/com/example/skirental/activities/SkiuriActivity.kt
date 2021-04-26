@@ -81,11 +81,20 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
         val clickedItem: Produs = listaSkiuri[position]
         skiuriAdapter.notifyItemChanged(position)
         val intent1 = Intent(this, InfoSkiuriActivity::class.java)
+
+        //trimit info necesare ale clientului
         intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
         intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
         intent1.putExtra("sex",intent.getStringExtra("sex"))
         intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+
+        //trimt obiectul produs
         intent1.putExtra("schiuri",clickedItem)
+
+        //trimit pt afisare info produs
+        intent1.putExtra("firma",clickedItem.firma)
+        intent1.putExtra("descriere",clickedItem.descriere)
+
         startActivity(intent1)
     }
 }

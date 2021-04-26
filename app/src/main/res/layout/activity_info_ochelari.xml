@@ -7,12 +7,35 @@
     tools:context=".infoactivities.InfoOchelariActivity">
 
     <TextView
+        android:id="@+id/textViewOchelariDescriere"
+        android:layout_width="304dp"
+        android:layout_height="187dp"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewOchelariBrandS"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewOchelariBrandS"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOchelariBrandS" />
+
+    <TextView
+        android:id="@+id/textViewOchelariBrandS"
+        android:layout_width="303dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewOchelariBrand"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewOchelariBrand"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOchelariBrand" />
+
+    <TextView
         android:id="@+id/textViewOchelariInfo"
-        android:layout_width="113dp"
-        android:layout_height="40dp"
+        android:layout_width="196dp"
+        android:layout_height="76dp"
         android:layout_marginStart="177dp"
         android:layout_marginEnd="177dp"
         android:text="Snow goggles information"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,5 +55,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.805" />
+
+    <TextView
+        android:id="@+id/textViewOchelariBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="269dp"
+        android:text="Brand"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
