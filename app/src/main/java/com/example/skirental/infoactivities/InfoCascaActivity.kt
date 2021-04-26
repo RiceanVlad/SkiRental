@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.activities.OchelariActivity
 import com.example.skirental.databinding.ActivityInfoCascaBinding
 import com.example.skirental.models.Produs
+import kotlinx.android.synthetic.main.activity_info_casca.*
 
 class InfoCascaActivity : AppCompatActivity() {
 
@@ -15,6 +16,9 @@ class InfoCascaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInfoCascaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        textViewBrandCascaS.setText(intent.getStringExtra("firma"))
+        textViewCascaDescriere.setText(intent.getStringExtra("descriere"))
 
         butoane()
     }

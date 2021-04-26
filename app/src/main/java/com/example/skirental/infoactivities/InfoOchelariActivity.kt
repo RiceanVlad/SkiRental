@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.activities.ProdusActivity
 import com.example.skirental.databinding.ActivityInfoOchelariBinding
 import com.example.skirental.models.Produs
+import kotlinx.android.synthetic.main.activity_info_ochelari.*
 
 class InfoOchelariActivity : AppCompatActivity() {
 
@@ -15,6 +16,9 @@ class InfoOchelariActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInfoOchelariBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        textViewOchelariBrandS.setText(intent.getStringExtra("firma"))
+        textViewOchelariDescriere.setText(intent.getStringExtra("descriere"))
 
         butoane()
     }

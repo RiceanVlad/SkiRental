@@ -9,25 +9,23 @@
 
     <TextView
         android:id="@+id/textViewSkiAlese"
-        android:layout_width="0dp"
-        android:layout_height="123dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="55dp"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="304dp"
+        android:layout_height="187dp"
+        android:layout_marginTop="28dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewBrandSkiS"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewBrandSkiS"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBrandSkiS" />
 
     <TextView
-        android:id="@+id/textViewUsername"
+        android:id="@+id/textViewBrandSkiS"
         android:layout_width="303dp"
         android:layout_height="56dp"
         android:layout_marginTop="4dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textViewFirmaSki"
-        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textViewFirmaSki"
         app:layout_constraintTop_toBottomOf="@+id/textViewFirmaSki" />
 
@@ -37,24 +35,22 @@
         android:layout_height="80dp"
         android:layout_marginStart="218dp"
         android:layout_marginEnd="77dp"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="121dp"
         android:text="Choose skis"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewSkiInfo"
         android:layout_width="248dp"
         android:layout_height="63dp"
-        android:layout_marginStart="133dp"
+        android:layout_marginStart="86dp"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="134dp"
+        android:layout_marginEnd="77dp"
         android:text="Ski information"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,22 +58,14 @@
         android:id="@+id/textViewFirmaSki"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="294dp"
         android:text="Brand"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewSkiAlese"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewSkiAlese"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSkiAlese" />
-
-    <Button
-        android:id="@+id/buttonSkipSchiuri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Skip"
-        app:layout_constraintEnd_toEndOf="@+id/buttonAlegeSkiuri"
-        app:layout_constraintStart_toStartOf="@+id/buttonAlegeSkiuri"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAlegeSkiuri" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

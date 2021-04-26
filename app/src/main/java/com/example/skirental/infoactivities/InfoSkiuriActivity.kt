@@ -19,7 +19,7 @@ class InfoSkiuriActivity : AppCompatActivity(), Serializable {
         setContentView(binding.root)
 
         binding.textViewSkiAlese.setText(intent.getStringExtra("descriere"))
-        binding.textViewUsername.setText(intent.getStringExtra("firma"))
+        binding.textViewBrandSkiS.setText(intent.getStringExtra("firma"))
 
         butoane()
     }
@@ -32,14 +32,6 @@ class InfoSkiuriActivity : AppCompatActivity(), Serializable {
             intent1.putExtra("sex",intent.getStringExtra("sex"))
             intent1.putExtra("varsta",intent.getStringExtra("varsta"))
             intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
-            startActivity(intent1)
-        }
-        binding.buttonSkipSchiuri.setOnClickListener(){
-            val intent1 = Intent(this, ClapariActivity::class.java)
-            intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
-            intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
-            intent1.putExtra("sex",intent.getStringExtra("sex"))
-            intent1.putExtra("varsta",intent.getStringExtra("varsta"))
             startActivity(intent1)
         }
     }

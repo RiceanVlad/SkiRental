@@ -90,6 +90,9 @@ class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClic
         intent1.putExtra("bete",intent.getSerializableExtra("bete") as? Produs)
         intent1.putExtra("casca",intent.getSerializableExtra("casca") as? Produs)
         intent1.putExtra("ochelari",clickedItem)
+        //trimit pt afisare info produs
+        intent1.putExtra("firma",clickedItem.firma)
+        intent1.putExtra("descriere",clickedItem.descriere)
         startActivity(intent1)
     }
 }
