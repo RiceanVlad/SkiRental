@@ -14,7 +14,6 @@ import com.example.skirental.infoactivities.InfoSkiuriActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.storage.FirebaseStorage
 
 class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickListener {
 
@@ -23,8 +22,6 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
     private var listaSkiuri = ArrayList<Produs>()
     val db = FirebaseFirestore.getInstance()
     private val TAG = "vlad"
-    val storage = FirebaseStorage.getInstance()
-    val storageRef = storage.reference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +29,6 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
         setContentView(binding.root)
 
         preiaSchiuriDinBD()
-
-
     }
 
     private fun preiaSchiuriDinBD(){

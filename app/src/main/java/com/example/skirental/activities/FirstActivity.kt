@@ -8,6 +8,7 @@ import com.example.skirental.databinding.ActivityFirstBinding
 class FirstActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFirstBinding
+    private val TAG = "vlad"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,12 @@ class FirstActivity : AppCompatActivity() {
             intent1.putExtra("sex",intent.getStringExtra("sex"))
             intent1.putExtra("varsta",intent.getStringExtra("varsta"))
             startActivity(intent1);
+        }
+        binding.buttonModificareDatePersonale.setOnClickListener {
+            val intent1 = Intent(this, ModificareDateActivity::class.java)
+            intent1.putExtra("email",intent.getStringExtra("email"))
+            intent1.putExtra("parola",intent.getStringExtra("parola"))
+            startActivity(intent1)
         }
     }
 }

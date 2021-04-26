@@ -10,6 +10,7 @@ import com.example.skirental.activities.FirstActivity
 import com.example.skirental.administrator.AdministratorActivity
 import com.example.skirental.databinding.ActivityMainBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -59,6 +60,8 @@ class MainActivity : AppCompatActivity() {
                                     intent.putExtra("marimepicior",document.get("marimepicior").toString())
                                     intent.putExtra("sex",document.get("sex").toString())
                                     intent.putExtra("varsta",document.get("varsta").toString())
+                                    intent.putExtra("email",editTextEmail.text.toString())
+                                    intent.putExtra("parola",editTextPassword.text.toString())
                                     startActivity(intent);
                                 }
                             } else{
