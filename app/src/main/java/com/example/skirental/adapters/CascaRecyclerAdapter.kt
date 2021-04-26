@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
-import com.example.skirental.models.Casca
+import com.example.skirental.models.Produs
 import com.google.firebase.storage.FirebaseStorage
 
 class CascaRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items: List<Casca> = ArrayList()
+    private var items: List<Produs> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return CascaViewHolder(
@@ -34,7 +34,7 @@ class CascaRecyclerAdapter(private val listener: OnItemClickListener) : Recycler
         return items.size
     }
 
-    fun submitList(blogList: List<Casca>){
+    fun submitList(blogList: List<Produs>){
         items = blogList
     }
 
@@ -57,7 +57,7 @@ class CascaRecyclerAdapter(private val listener: OnItemClickListener) : Recycler
             }
         }
 
-        fun bind(casca: Casca){
+        fun bind(casca: Produs){
 
             val storage = FirebaseStorage.getInstance()
             val storageRef = storage.reference

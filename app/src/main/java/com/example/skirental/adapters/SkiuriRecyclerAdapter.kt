@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
-import com.example.skirental.models.PerecheSki
+import com.example.skirental.models.Produs
 import com.google.firebase.storage.FirebaseStorage
 
 class SkiuriRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items: List<PerecheSki> = ArrayList()
+    private var items: List<Produs> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return SkiuriViewHolder(
@@ -34,7 +34,7 @@ class SkiuriRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
         return items.size
     }
 
-    fun submitList(blogList: List<PerecheSki>){
+    fun submitList(blogList: List<Produs>){
         items = blogList
     }
 
@@ -57,14 +57,14 @@ class SkiuriRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
             }
         }
 
-        fun bind(perecheSkiuri: PerecheSki){
+        fun bind(produs: Produs){
 
             val storage = FirebaseStorage.getInstance()
             val storageRef = storage.reference
-            var imagesRef = storageRef.child("schiuri/${perecheSkiuri.imagine}.jpg")
+            var imagesRef = storageRef.child("schiuri/${produs.imagine}.jpg")
 
-            blogTitle.setText(perecheSkiuri.firma)
-            blogAuthor.setText(perecheSkiuri.descriere)
+            blogTitle.setText(produs.firma)
+            blogAuthor.setText(produs.descriere)
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)

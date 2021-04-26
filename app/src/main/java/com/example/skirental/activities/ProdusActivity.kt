@@ -9,21 +9,43 @@ import com.example.skirental.R
 import com.example.skirental.adapters.ProdusRecyclerAdapter
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Produs
+import com.example.skirental.models.ProdusFinal
 
 class ProdusActivity : AppCompatActivity(), ProdusRecyclerAdapter.OnItemClickListener {
 
     private lateinit var produsAdapter: ProdusRecyclerAdapter
-    private var listaProdus = ArrayList<Produs>()
+    private var listaProdus = ArrayList<ProdusFinal>()
+    private lateinit var p : Produs
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_produs)
 
+        adaugaProduseInCos()
         initRecyclerView()
         addDataSet(listaProdus)
     }
 
-    private fun addDataSet(data: ArrayList<Produs>){
+    private fun adaugaProduseInCos() {
+        p = intent.getSerializableExtra("schiuri") as Produs
+        listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"schiuri"))
+
+        p = intent.getSerializableExtra("clapari") as Produs
+        listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"clapari"))
+
+        p = intent.getSerializableExtra("bete") as Produs
+        listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"bete"))
+
+        p = intent.getSerializableExtra("casca") as Produs
+        listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"casti"))
+
+        p = intent.getSerializableExtra("ochelari") as Produs
+        listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"ochelari"))
+
+
+    }
+
+    private fun addDataSet(data: ArrayList<ProdusFinal>){
         produsAdapter.submitList(data)
     }
 
@@ -39,7 +61,7 @@ class ProdusActivity : AppCompatActivity(), ProdusRecyclerAdapter.OnItemClickLis
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
-        val clickedItem: Produs = listaProdus[position]
+        val clickedItem: ProdusFinal = listaProdus[position]
         produsAdapter.notifyItemChanged(position)
 
     }

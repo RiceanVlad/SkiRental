@@ -12,7 +12,7 @@ import com.example.skirental.adapters.SkiuriRecyclerAdapter
 import com.example.skirental.databinding.ActivitySkiuriBinding
 import com.example.skirental.infoactivities.InfoSkiuriActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
-import com.example.skirental.models.PerecheSki
+import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 
@@ -20,7 +20,7 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
 
     private lateinit var binding: ActivitySkiuriBinding
     private lateinit var skiuriAdapter: SkiuriRecyclerAdapter
-    private var listaSkiuri = ArrayList<PerecheSki>()
+    private var listaSkiuri = ArrayList<Produs>()
     val db = FirebaseFirestore.getInstance()
     private val TAG = "vlad"
     val storage = FirebaseStorage.getInstance()
@@ -30,8 +30,6 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
         super.onCreate(savedInstanceState)
         binding = ActivitySkiuriBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        Log.d(TAG,"skiuriActivity ${intent.getStringExtra("inaltime")}")
 
         preiaSchiuriDinBD()
 
@@ -48,11 +46,10 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
                 .addOnSuccessListener { documents ->
                     if(documents.size() != 0){
                         for(document in documents){
-                            val perecheSki = PerecheSki(document.get("firma").toString(),
+                            val produs = Produs(document.get("firma").toString(),
                                     document.get("descriere").toString(),
                                     document.id)
-                            listaSkiuri.add(perecheSki)
-                            Log.d(TAG,perecheSki.imagine)
+                            listaSkiuri.add(produs)
                         }
                         initRecyclerView()
                         addDataSet(listaSkiuri)
@@ -65,7 +62,7 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
                 }
     }
 
-    private fun addDataSet(data: ArrayList<PerecheSki>){
+    private fun addDataSet(data: ArrayList<Produs>){
         skiuriAdapter.submitList(data)
     }
 
@@ -81,13 +78,15 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
-        val clickedItem: PerecheSki = listaSkiuri[position]
+        val clickedItem: Produs = listaSkiuri[position]
         skiuriAdapter.notifyItemChanged(position)
         val intent1 = Intent(this, InfoSkiuriActivity::class.java)
         intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
         intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
         intent1.putExtra("sex",intent.getStringExtra("sex"))
         intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+        intent1.putExtra("schiuri",clickedItem)
         startActivity(intent1)
     }
 }
+

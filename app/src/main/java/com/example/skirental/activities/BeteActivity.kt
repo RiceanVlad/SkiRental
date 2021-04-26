@@ -11,13 +11,13 @@ import com.example.skirental.R
 import com.example.skirental.adapters.BeteRecyclerAdapter
 import com.example.skirental.infoactivities.InfoBeteActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
-import com.example.skirental.models.Bete
+import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 
 class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListener {
 
     private lateinit var beteAdapter: BeteRecyclerAdapter
-    private var listaBete = ArrayList<Bete>()
+    private var listaBete = ArrayList<Produs>()
     val db = FirebaseFirestore.getInstance()
     private val TAG = "vlad"
 
@@ -38,7 +38,7 @@ class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListene
                 .addOnSuccessListener { documents ->
                     if(documents.size() != 0){
                         for(document in documents){
-                            val bete = Bete(document.get("firma").toString(),
+                            val bete = Produs(document.get("firma").toString(),
                                     document.get("descriere").toString(),
                                     document.id)
                             listaBete.add(bete)
@@ -54,12 +54,12 @@ class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListene
                 }
     }
 
-    private fun addDataSet(data: ArrayList<Bete>){
+    private fun addDataSet(data: ArrayList<Produs>){
         beteAdapter.submitList(data)
     }
 
     private fun initRecyclerView(){
-        val recycler_view: RecyclerView = findViewById(R.id.recycler_view_casca)
+        val recycler_view: RecyclerView = findViewById(R.id.recycler_view_bete)
         recycler_view.layoutManager = LinearLayoutManager(this@BeteActivity)
         val topSpacingDecoration = TopSpacingItemDecoration(30)
         recycler_view.addItemDecoration(topSpacingDecoration)
@@ -70,13 +70,16 @@ class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListene
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
-        val clickedItem: Bete = listaBete[position]
+        val clickedItem: Produs = listaBete[position]
         beteAdapter.notifyItemChanged(position)
         val intent1 = Intent(this, InfoBeteActivity::class.java)
         intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
         intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
         intent1.putExtra("sex",intent.getStringExtra("sex"))
         intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+        intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
+        intent1.putExtra("clapari",intent.getSerializableExtra("clapari") as? Produs)
+        intent1.putExtra("bete",clickedItem)
         startActivity(intent1)
     }
 }

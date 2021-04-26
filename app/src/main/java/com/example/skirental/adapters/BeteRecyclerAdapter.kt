@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
-import com.example.skirental.models.Bete
+import com.example.skirental.models.Produs
 import com.google.firebase.storage.FirebaseStorage
 
 class BeteRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items: List<Bete> = ArrayList()
+    private var items: List<Produs> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return BeteViewHolder(
@@ -34,7 +34,7 @@ class BeteRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerV
         return items.size
     }
 
-    fun submitList(blogList: List<Bete>){
+    fun submitList(blogList: List<Produs>){
         items = blogList
     }
 
@@ -57,7 +57,7 @@ class BeteRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerV
             }
         }
 
-        fun bind(bete: Bete){
+        fun bind(bete: Produs){
 
             val storage = FirebaseStorage.getInstance()
             val storageRef = storage.reference

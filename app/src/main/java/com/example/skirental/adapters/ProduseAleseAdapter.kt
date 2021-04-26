@@ -9,11 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.skirental.R
-import com.example.skirental.models.Produs
+import com.example.skirental.models.ProdusFinal
+import com.google.firebase.storage.FirebaseStorage
 
 class ProdusRecyclerAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items: List<Produs> = ArrayList()
+    private var items: List<ProdusFinal> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ProdusViewHolder(
@@ -33,7 +34,7 @@ class ProdusRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
         return items.size
     }
 
-    fun submitList(blogList: List<Produs>){
+    fun submitList(blogList: List<ProdusFinal>){
         items = blogList
     }
 
@@ -56,7 +57,11 @@ class ProdusRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
             }
         }
 
-        fun bind(produs: Produs){
+        fun bind(produs: ProdusFinal){
+
+            val storage = FirebaseStorage.getInstance()
+            val storageRef = storage.reference
+            var imagesRef = storageRef.child("${produs.tip}/${produs.imagine}.jpg")
 
             blogTitle.setText(produs.descriere)
             blogAuthor.setText(produs.firma)
@@ -65,10 +70,12 @@ class ProdusRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
 
-            Glide.with(itemView.context)
-                .applyDefaultRequestOptions(requestOptions)
-                .load(produs.imagine)
-                .into(blogImage)
+            imagesRef.downloadUrl.addOnSuccessListener {
+                Glide.with(itemView.context)
+                        .applyDefaultRequestOptions(requestOptions)
+                        .load(it)
+                        .into(blogImage)
+            }
         }
 
     }

@@ -11,13 +11,13 @@ import com.example.skirental.R
 import com.example.skirental.adapters.CascaRecyclerAdapter
 import com.example.skirental.infoactivities.InfoCascaActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
-import com.example.skirental.models.Casca
+import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 
 class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListener {
 
     private lateinit var cascaAdapter: CascaRecyclerAdapter
-    private var listaCasti = ArrayList<Casca>()
+    private var listaCasti = ArrayList<Produs>()
     val db = FirebaseFirestore.getInstance()
     private val TAG = "vlad"
 
@@ -45,7 +45,7 @@ class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListe
                 .addOnSuccessListener { documents ->
                     if(documents.size() != 0){
                         for(document in documents){
-                            val casca = Casca(document.get("firma").toString(),
+                            val casca = Produs(document.get("firma").toString(),
                                     document.get("descriere").toString(),
                                     document.id)
                             listaCasti.add(casca)
@@ -61,7 +61,7 @@ class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListe
                 }
     }
 
-    private fun addDataSet(data: ArrayList<Casca>){
+    private fun addDataSet(data: ArrayList<Produs>){
         cascaAdapter.submitList(data)
     }
 
@@ -77,13 +77,17 @@ class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListe
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
-        val clickedItem: Casca = listaCasti[position]
+        val clickedItem: Produs = listaCasti[position]
         cascaAdapter.notifyItemChanged(position)
         val intent1 = Intent(this, InfoCascaActivity::class.java)
         intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
         intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
         intent1.putExtra("sex",intent.getStringExtra("sex"))
         intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+        intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
+        intent1.putExtra("clapari",intent.getSerializableExtra("clapari") as? Produs)
+        intent1.putExtra("bete",intent.getSerializableExtra("bete") as? Produs)
+        intent1.putExtra("casca",clickedItem)
         startActivity(intent1)
     }
 }

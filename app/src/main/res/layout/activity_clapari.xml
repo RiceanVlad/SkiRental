@@ -7,7 +7,7 @@
     tools:context=".activities.ClapariActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_casca"
+        android:id="@+id/recycler_view_clapari"
         android:layout_width="411dp"
         android:layout_height="597dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textViewAlegeCasca"
+        android:id="@+id/textViewAlegeClapari"
         android:layout_width="242dp"
         android:layout_height="53dp"
         android:layout_marginStart="14dp"
@@ -27,7 +27,7 @@
         android:layout_marginBottom="11dp"
         android:text="Choose boots"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/recycler_view_casca"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_view_clapari"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"

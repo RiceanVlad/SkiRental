@@ -11,13 +11,13 @@ import com.example.skirental.R
 import com.example.skirental.adapters.OchelariRecyclerAdapter
 import com.example.skirental.infoactivities.InfoOchelariActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
-import com.example.skirental.models.Ochelari
+import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 
 class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClickListener {
 
     private lateinit var ochelariAdapter: OchelariRecyclerAdapter
-    private var listaOchelari = ArrayList<Ochelari>()
+    private var listaOchelari = ArrayList<Produs>()
     val db = FirebaseFirestore.getInstance()
     private val TAG = "vlad"
 
@@ -45,7 +45,7 @@ class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClic
                 .addOnSuccessListener { documents ->
                     if(documents.size() != 0){
                         for(document in documents){
-                            val ochelari = Ochelari(document.get("firma").toString(),
+                            val ochelari = Produs(document.get("firma").toString(),
                                     document.get("descriere").toString(),
                                     document.id)
                             listaOchelari.add(ochelari)
@@ -62,7 +62,7 @@ class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClic
     }
 
 
-    private fun addDataSet(data: ArrayList<Ochelari>){
+    private fun addDataSet(data: ArrayList<Produs>){
         ochelariAdapter.submitList(data)
     }
 
@@ -78,13 +78,18 @@ class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClic
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
-        val clickedItem: Ochelari = listaOchelari[position]
+        val clickedItem: Produs = listaOchelari[position]
         ochelariAdapter.notifyItemChanged(position)
         val intent1 = Intent(this, InfoOchelariActivity::class.java)
         intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
         intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
         intent1.putExtra("sex",intent.getStringExtra("sex"))
         intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+        intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
+        intent1.putExtra("clapari",intent.getSerializableExtra("clapari") as? Produs)
+        intent1.putExtra("bete",intent.getSerializableExtra("bete") as? Produs)
+        intent1.putExtra("casca",intent.getSerializableExtra("casca") as? Produs)
+        intent1.putExtra("ochelari",clickedItem)
         startActivity(intent1)
     }
 }
