@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SkiRental">
-        <activity android:name=".activities.ModificareDateActivity"></activity>
+        <activity android:name=".administrator.AfisareProduseActivity"></activity>
+        <activity android:name=".administrator.DeleteProductsActivity" />
+        <activity android:name=".activities.ModificareDateActivity" />
         <activity android:name=".administrator.FormularAdaugareActivity" />
         <activity android:name=".administrator.AdaugaEchipamentActivity" />
         <activity android:name=".administrator.AdministratorActivity" />

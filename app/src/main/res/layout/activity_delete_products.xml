@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".administrator.DeleteProductsActivity">
+
+    <Button
+        android:id="@+id/buttonStergeSchiuri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="Delete ski's"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStergeClapari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Delete boots"
+        app:layout_constraintEnd_toEndOf="@+id/buttonStergeSchiuri"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="@+id/buttonStergeSchiuri"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStergeSchiuri" />
+
+    <Button
+        android:id="@+id/buttonStergeBete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="delete poles"
+        app:layout_constraintEnd_toEndOf="@+id/buttonStergeClapari"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonStergeClapari"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStergeClapari" />
+
+    <Button
+        android:id="@+id/buttonStergeCasca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="delete helmet"
+        app:layout_constraintEnd_toEndOf="@+id/buttonStergeBete"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/buttonStergeBete"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStergeBete" />
+
+    <Button
+        android:id="@+id/buttonStergeOchelari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="delete goggles"
+        app:layout_constraintEnd_toEndOf="@+id/buttonStergeCasca"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/buttonStergeCasca"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStergeCasca" />
+</androidx.constraintlayout.widget.ConstraintLayout>

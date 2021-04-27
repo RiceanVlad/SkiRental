@@ -20,5 +20,9 @@ class AdministratorActivity : AppCompatActivity() {
             val intent = Intent(this,AdaugaEchipamentActivity::class.java)
             startActivity(intent)
         }
+        buttonStergeEchipament.setOnClickListener {
+            val intent = Intent(this,DeleteProductsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
