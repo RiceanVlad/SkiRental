@@ -13,6 +13,7 @@ import com.example.skirental.infoactivities.InfoBeteActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_bete.*
 
 class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListener {
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonConfirmareDa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="Yes"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonConfirmareNu"
+        app:layout_constraintStart_toEndOf="@+id/buttonConfirmareNu"
+        app:layout_constraintTop_toTopOf="@+id/buttonConfirmareNu"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonConfirmareNu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="No"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDescriereSterge"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewDescriereSterge"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescriereSterge" />
+
+    <TextView
+        android:id="@+id/textViewFirmaSterge"
+        android:layout_width="132dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="195dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDescriereSterge"
+        android:layout_width="241dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFirmaSterge"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewFirmaSterge"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirmaSterge" />
+</androidx.constraintlayout.widget.ConstraintLayout>

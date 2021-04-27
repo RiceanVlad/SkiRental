@@ -14,6 +14,7 @@ import com.example.skirental.infoactivities.InfoSkiuriActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_skiuri.*
 
 class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickListener {
 
@@ -29,6 +30,13 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
         setContentView(binding.root)
 
         preiaSchiuriDinBD()
+        butoane()
+    }
+
+    private fun butoane() {
+        floatingActionButtonSchiuri.setOnClickListener {
+
+        }
     }
 
     private fun preiaSchiuriDinBD(){
@@ -92,5 +100,7 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
 
         startActivity(intent1)
     }
+
+
 }
 
