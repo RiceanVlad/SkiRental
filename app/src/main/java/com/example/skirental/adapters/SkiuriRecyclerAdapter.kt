@@ -77,7 +77,6 @@ class SkiuriRecyclerAdapter(private val listener: OnItemClickListener) : Recycle
                         .into(blogImage)
             }
         }
-
     }
 
     interface OnItemClickListener{

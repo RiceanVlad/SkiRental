@@ -13,6 +13,7 @@ import com.example.skirental.infoactivities.InfoClapariActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_clapari.*
 
 class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickListener {
 
@@ -25,10 +26,22 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clapari)
 
-
-
         preiaClapariDinBD()
+        butoane()
+    }
 
+    private fun butoane() {
+        floatingActionButtonClapari.setOnClickListener {
+            val intent1 = Intent(this, BeteActivity::class.java)
+            intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+            intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+            intent1.putExtra("sex",intent.getStringExtra("sex"))
+            intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+            intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
+            intent1.putExtra("clapari",Produs("null","",""))
+
+            startActivity(intent1)
+        }
     }
 
     private fun preiaClapariDinBD(){

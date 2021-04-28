@@ -28,19 +28,24 @@ class ProdusActivity : AppCompatActivity(), ProdusRecyclerAdapter.OnItemClickLis
 
     private fun adaugaProduseInCos() {
         p = intent.getSerializableExtra("schiuri") as Produs
-        listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"schiuri"))
+        if(!p.firma.equals("null"))
+            listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"schiuri"))
 
         p = intent.getSerializableExtra("clapari") as Produs
-        listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"clapari"))
+        if(!p.firma.equals("null"))
+            listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"clapari"))
 
         p = intent.getSerializableExtra("bete") as Produs
-        listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"bete"))
+        if(!p.firma.equals("null"))
+            listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"bete"))
 
         p = intent.getSerializableExtra("casca") as Produs
-        listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"casti"))
+        if(!p.firma.equals("null"))
+            listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"casti"))
 
         p = intent.getSerializableExtra("ochelari") as Produs
-        listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"ochelari"))
+        if(!p.firma.equals("null"))
+            listaProdus.add(ProdusFinal(p.firma,p.descriere,p.imagine,"ochelari"))
 
 
     }

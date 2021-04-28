@@ -3,6 +3,7 @@ package com.example.skirental.activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.MainActivity
@@ -15,6 +16,7 @@ class ModificareDateActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
     private val TAG = "vlad"
     private var userId = "null"
+    private var dificultate = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +39,7 @@ class ModificareDateActivity : AppCompatActivity() {
                         editTextNumeM.setText(document.get("nume").toString())
                         editTextGreutateM.setText(document.get("greutate").toString())
                         editTextMarimePiciorM.setText(document.get("marimepicior").toString())
-                        editTextNivelM.setText(document.get("nivel").toString())
+                        seekBarModificare.setProgress(document.get("nivel").toString().toInt())
                         editTextVarstaM.setText(document.get("varsta").toString())
                         editTextParolaM.setText(document.get("parola").toString())
                         editTextInaltimeM.setText(document.get("inaltime").toString())
@@ -68,6 +70,20 @@ class ModificareDateActivity : AppCompatActivity() {
             val intent1 = Intent(this,MainActivity::class.java)
             startActivity(intent1)
         }
+        seekBarModificare?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
+                dificultate = progress
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+                Toast.makeText(applicationContext,"start tracking",Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                Toast.makeText(applicationContext,"stop tracking",Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun updateInBD() {
@@ -81,7 +97,7 @@ class ModificareDateActivity : AppCompatActivity() {
                 "greutate",editTextGreutateM.text.toString().toInt(),
                 "inaltime",editTextInaltimeM.text.toString().toInt(),
             "marimepicior",editTextMarimePiciorM.text.toString().toInt(),
-            "nivel",editTextNivelM.text.toString().toInt(),
+            "nivel",dificultate,
             "nume",editTextNumeM.text.toString(),
             "parola",editTextParolaM.text.toString(),
             "sex",sex,

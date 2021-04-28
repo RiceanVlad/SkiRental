@@ -13,6 +13,7 @@ import com.example.skirental.infoactivities.InfoCascaActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_casca.*
 
 class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListener {
 
@@ -26,6 +27,23 @@ class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListe
         setContentView(R.layout.activity_casca)
 
         preiaCastiDinBD()
+        butoane()
+    }
+
+    private fun butoane() {
+        floatingActionButtonCasca.setOnClickListener {
+            val intent1 = Intent(this, OchelariActivity::class.java)
+            intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+            intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+            intent1.putExtra("sex",intent.getStringExtra("sex"))
+            intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+            intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
+            intent1.putExtra("clapari",intent.getSerializableExtra("clapari") as? Produs)
+            intent1.putExtra("bete",intent.getSerializableExtra("bete") as? Produs)
+            intent1.putExtra("casca",Produs("null","",""))
+
+            startActivity(intent1)
+        }
     }
 
     private fun preiaCastiDinBD(){

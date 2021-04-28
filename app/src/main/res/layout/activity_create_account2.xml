@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateAccount2Activity">
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave5"
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextVarsta"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_elderly"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="109dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_border"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="F"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="M"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <EditText
+        android:id="@+id/editTextInaltime2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_height"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Height"
+        android:inputType="numberSigned"
+        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextVarsta"
+        app:layout_constraintStart_toStartOf="@+id/editTextVarsta"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVarsta" />
+
+    <EditText
+        android:id="@+id/editTextMarimePicior2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_leg"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Foot size"
+        android:inputType="numberSigned"
+        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextInaltime2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextInaltime2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInaltime2" />
+
+    <EditText
+        android:id="@+id/editTextGreutate2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_anchor"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Weight"
+        android:inputType="numberSigned"
+        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextMarimePicior2"
+        app:layout_constraintStart_toStartOf="@+id/editTextMarimePicior2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMarimePicior2" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Sex"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chipGroup"
+        app:layout_constraintEnd_toStartOf="@+id/chipGroup"
+        app:layout_constraintTop_toTopOf="@+id/chipGroup" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Finish the form"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/view7" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_border"
+        android:max="5"
+        android:progress="1"
+        app:layout_constraintEnd_toEndOf="@+id/editTextGreutate2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextGreutate2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGreutate2" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="74dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="20dp"
+        android:text="Difficulty Level"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toTopOf="@+id/seekBar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/round_bg"
+        android:text="FINISH"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chipGroup"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="168dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+        app:srcCompat="@drawable/bear" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="85dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:srcCompat="@drawable/ic_baseline_how_to_reg_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
