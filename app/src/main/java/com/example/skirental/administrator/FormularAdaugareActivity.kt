@@ -156,6 +156,31 @@ class FormularAdaugareActivity : AppCompatActivity() {
             editTextLungime.visibility = View.INVISIBLE
             chipGroupCascaOchelari.visibility = View.INVISIBLE
         }
+
+        if(intent.getStringExtra("produs").equals("schiuri")){
+            textViewTitluAdaugaProdus.setText("Add Ski's")
+            buttonAdaugaProdus.setText("Add Ski's")
+        }
+        if(intent.getStringExtra("produs").equals("clapari")){
+            textViewTitluAdaugaProdus.setText("Add Boots")
+            buttonAdaugaProdus.setText("Add Boots")
+        }
+
+        if(intent.getStringExtra("produs").equals("bete")){
+            textViewTitluAdaugaProdus.setText("Add Poles")
+            buttonAdaugaProdus.setText("Add Poles")
+        }
+
+        if(intent.getStringExtra("produs").equals("casca")){
+            textViewTitluAdaugaProdus.setText("Add Helmet")
+            buttonAdaugaProdus.setText("Add Helmet")
+        }
+
+        if(intent.getStringExtra("produs").equals("ochelari")){
+            textViewTitluAdaugaProdus.setText("Add Goggles")
+            buttonAdaugaProdus.setText("Add Goggles")
+        }
+
     }
 
     private fun uploadFile(key : String, dir : String) {

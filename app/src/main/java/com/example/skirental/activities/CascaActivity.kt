@@ -94,7 +94,6 @@ class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListe
     }
 
     override fun onItemClick(position: Int) {
-        Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
         val clickedItem: Produs = listaCasti[position]
         cascaAdapter.notifyItemChanged(position)
         val intent1 = Intent(this, InfoCascaActivity::class.java)

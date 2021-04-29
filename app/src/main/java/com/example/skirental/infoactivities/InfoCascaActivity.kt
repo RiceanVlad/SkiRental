@@ -43,7 +43,7 @@ class InfoCascaActivity : AppCompatActivity() {
             val produs : Produs = intent.getSerializableExtra("casca") as Produs
 
             //update inchiriat = true
-            db.collection("casca").document(produs.imagine)
+            db.collection("casti").document(produs.imagine)
                 .update("inchiriat",true)
                 .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully updated!") }
                 .addOnFailureListener { e -> Log.w(TAG, "Error updating document", e) }

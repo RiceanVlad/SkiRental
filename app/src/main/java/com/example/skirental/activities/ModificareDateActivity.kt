@@ -41,7 +41,6 @@ class ModificareDateActivity : AppCompatActivity() {
                         editTextMarimePiciorM.setText(document.get("marimepicior").toString())
                         seekBarModificare.setProgress(document.get("nivel").toString().toInt())
                         editTextVarstaM.setText(document.get("varsta").toString())
-                        editTextParolaM.setText(document.get("parola").toString())
                         editTextInaltimeM.setText(document.get("inaltime").toString())
                         var sex = true
                         val str = document.get("sex").toString()
@@ -74,14 +73,22 @@ class ModificareDateActivity : AppCompatActivity() {
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 dificultate = progress
+                if (progress <= 1)
+                    Toast.makeText(this@ModificareDateActivity, "Beginner", Toast.LENGTH_SHORT).show()
+                if (progress == 2 || progress == 3)
+                    Toast.makeText(this@ModificareDateActivity, "Intermediate", Toast.LENGTH_SHORT).show()
+                if (progress > 3 && progress <5)
+                    Toast.makeText(this@ModificareDateActivity, "Advanced", Toast.LENGTH_SHORT).show()
+                if (progress == 5)
+                    Toast.makeText(this@ModificareDateActivity, "Pro", Toast.LENGTH_SHORT).show()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
-                Toast.makeText(applicationContext,"start tracking",Toast.LENGTH_SHORT).show()
+//                Toast.makeText(applicationContext,"start tracking",Toast.LENGTH_SHORT).show()
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                Toast.makeText(applicationContext,"stop tracking",Toast.LENGTH_SHORT).show()
+//                Toast.makeText(applicationContext,"stop tracking",Toast.LENGTH_SHORT).show()
             }
         })
     }
@@ -99,7 +106,6 @@ class ModificareDateActivity : AppCompatActivity() {
             "marimepicior",editTextMarimePiciorM.text.toString().toInt(),
             "nivel",dificultate,
             "nume",editTextNumeM.text.toString(),
-            "parola",editTextParolaM.text.toString(),
             "sex",sex,
             "varsta",editTextVarstaM.text.toString().toInt())
             .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully updated!") }

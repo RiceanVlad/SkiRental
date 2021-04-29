@@ -1,7 +1,6 @@
 package com.example.skirental.activities
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -65,7 +64,6 @@ class ProdusActivity : AppCompatActivity(), ProdusRecyclerAdapter.OnItemClickLis
     }
 
     override fun onItemClick(position: Int) {
-        Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
         val clickedItem: ProdusFinal = listaProdus[position]
         produsAdapter.notifyItemChanged(position)
 

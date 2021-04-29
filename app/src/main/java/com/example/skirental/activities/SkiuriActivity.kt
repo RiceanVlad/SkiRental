@@ -92,7 +92,6 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
 
     override fun onItemClick(position: Int) {
 
-        Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
         val clickedItem: Produs = listaSkiuri[position]
 
         skiuriAdapter.notifyItemChanged(position)
