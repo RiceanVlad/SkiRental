@@ -32,7 +32,7 @@ class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListene
     }
 
     private fun butoane() {
-        floatingActionButtonBete.setOnClickListener {
+        buttonSkipBete.setOnClickListener {
             val intent1 = Intent(this, CascaActivity::class.java)
             intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
             intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))

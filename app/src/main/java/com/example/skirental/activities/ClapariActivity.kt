@@ -31,7 +31,7 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
     }
 
     private fun butoane() {
-        floatingActionButtonClapari.setOnClickListener {
+        buttonSkipClapari.setOnClickListener {
             val intent1 = Intent(this, BeteActivity::class.java)
             intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
             intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))

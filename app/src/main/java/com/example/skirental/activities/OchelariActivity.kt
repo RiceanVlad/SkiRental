@@ -31,7 +31,7 @@ class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClic
     }
 
     private fun butoane() {
-        floatingActionButtonOchelari.setOnClickListener {
+        buttonSkipOchelari.setOnClickListener {
             val intent1 = Intent(this, ProdusActivity::class.java)
             intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
             intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))

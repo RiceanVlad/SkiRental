@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SkiRental">
-        <activity android:name=".activities.CreateAccount2Activity"></activity>
+        <activity android:name=".activities.PlataActivity"></activity>
+        <activity android:name=".activities.CreateAccount2Activity" />
         <activity android:name=".administrator.CodeScanerActivity" />
         <activity android:name=".administrator.AfisareProduseActivity" />
         <activity android:name=".administrator.DeleteProductsActivity" />

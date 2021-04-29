@@ -31,7 +31,7 @@ class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListe
     }
 
     private fun butoane() {
-        floatingActionButtonCasca.setOnClickListener {
+        buttonSkipCasca.setOnClickListener {
             val intent1 = Intent(this, OchelariActivity::class.java)
             intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
             intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
