@@ -77,8 +77,6 @@ class AfisareProduseActivity : AppCompatActivity(),DeleteRecyclerAdapter.OnItemC
             .setView(mDialogView)
             .setTitle("Are you sure you want to delete this product?")
         val mAlertDialog = mBuilder.show()
-        mDialogView.textViewFirmaSterge.setText(clickedItem.firma)
-        mDialogView.textViewDescriereSterge.setText(clickedItem.descriere)
         mDialogView.buttonConfirmareDa.setOnClickListener {
             db.collection(intent.getStringExtra("tip").toString()).document(clickedItem.imagine) // nu sterg imaginea, doar ca imagine e id pe care trebuie sa-l sterg din firestore
                 .delete()

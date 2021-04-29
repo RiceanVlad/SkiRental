@@ -87,7 +87,6 @@ class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListene
     }
 
     override fun onItemClick(position: Int) {
-        Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
         val clickedItem: Produs = listaBete[position]
         beteAdapter.notifyItemChanged(position)
         val intent1 = Intent(this, InfoBeteActivity::class.java)

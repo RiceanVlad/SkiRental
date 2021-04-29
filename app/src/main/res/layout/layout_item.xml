@@ -45,9 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="The Title of a Blog"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/blog_author"
@@ -55,7 +53,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Mitch Tabian"
-                android:textSize="15sp"
+                android:textColor="@color/colorSecondary"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
 

@@ -49,7 +49,7 @@
         android:id="@+id/editTextNumeM"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/round_border"
         android:ems="10"
         android:inputType="textPersonName"
@@ -60,13 +60,13 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailM" />
 
     <EditText
-        android:id="@+id/editTextParolaM"
+        android:id="@+id/editTextGreutateM"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/round_border"
         android:ems="10"
-        android:inputType="textPassword"
+        android:inputType="number"
         android:padding="16dp"
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="@+id/editTextNumeM"
@@ -74,24 +74,10 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextNumeM" />
 
     <EditText
-        android:id="@+id/editTextGreutateM"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/round_border"
-        android:ems="10"
-        android:inputType="number"
-        android:padding="16dp"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="@+id/editTextParolaM"
-        app:layout_constraintStart_toStartOf="@+id/editTextParolaM"
-        app:layout_constraintTop_toBottomOf="@+id/editTextParolaM" />
-
-    <EditText
         android:id="@+id/editTextVarstaM"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/round_border"
         android:ems="10"
         android:inputType="number"
@@ -105,7 +91,7 @@
         android:id="@+id/editTextMarimePiciorM"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/round_border"
         android:ems="10"
         android:inputType="number"
@@ -119,7 +105,7 @@
         android:id="@+id/editTextInaltimeM"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/round_border"
         android:ems="10"
         android:inputType="number"
@@ -133,7 +119,7 @@
         android:id="@+id/chipGroupModificare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/round_bg"
         app:layout_constraintEnd_toEndOf="@+id/seekBarModificare"
         app:layout_constraintHorizontal_bias="0.0"
@@ -167,10 +153,10 @@
         android:layout_width="112dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/round_bg"
-        android:text="Modify"
+        android:text="Save"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -204,20 +190,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextNumeM"
         app:layout_constraintVertical_bias="0.461" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Password"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextParolaM"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextParolaM"
-        app:layout_constraintVertical_bias="0.423" />
 
     <TextView
         android:id="@+id/textView6"
@@ -302,7 +274,7 @@
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/round_border"
         android:max="5"
         android:progress="1"

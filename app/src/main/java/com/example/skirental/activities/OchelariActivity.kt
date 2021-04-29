@@ -96,7 +96,6 @@ class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClic
     }
 
     override fun onItemClick(position: Int) {
-        Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
         val clickedItem: Produs = listaOchelari[position]
         ochelariAdapter.notifyItemChanged(position)
         val intent1 = Intent(this, InfoOchelariActivity::class.java)

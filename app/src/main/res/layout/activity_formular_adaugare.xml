@@ -6,43 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".administrator.FormularAdaugareActivity">
 
+    <View
+        android:id="@+id/view21"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_wave7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/editTextLungime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/round_border"
         android:ems="10"
         android:hint="Length"
         android:inputType="textPersonName"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/editTextDescriereAdaugareEchipament"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextDescriereAdaugareEchipament"
         app:layout_constraintTop_toBottomOf="@+id/editTextDescriereAdaugareEchipament" />
 
     <EditText
         android:id="@+id/editTextFirma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="158dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round_border"
         android:ems="10"
         android:hint="Brand"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitluAdaugaProdus"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitluAdaugaProdus"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitluAdaugaProdus" />
 
     <EditText
         android:id="@+id/editTextDescriereAdaugareEchipament"
-        android:layout_width="301dp"
-        android:layout_height="44dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/round_border_big_blue"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Description"
         android:inputType="textMultiLine"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/editTextFirma"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextFirma"
@@ -50,24 +72,27 @@
 
     <EditText
         android:id="@+id/editTextMarimeClapar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_border"
         android:ems="10"
         android:hint="Boots size"
         android:inputType="numberSigned"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextDescriereAdaugareEchipament"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextDescriereAdaugareEchipament"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDescriereAdaugareEchipament"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescriereAdaugareEchipament" />
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroupCascaOchelari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/editTextDescriereAdaugareEchipament"
         app:layout_constraintHorizontal_bias="0.0"
@@ -80,60 +105,71 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
-            android:text="Child" />
+            android:text="Child"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipAdult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
-            android:text="Adult" />
+            android:text="Adult"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </com.google.android.material.chip.ChipGroup>
 
     <Button
         android:id="@+id/buttonAdaugaProdus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="234dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="140dp"
+        android:layout_width="150dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="32dp"
         android:text="Add product"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewImagineProdus"
+        app:layout_constraintStart_toEndOf="@+id/imageViewImagineProdus"
+        app:layout_constraintTop_toTopOf="@+id/imageViewImagineProdus" />
 
     <TextView
         android:id="@+id/textViewTitluAdaugaProdus"
-        android:layout_width="173dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="123dp"
+        android:layout_width="221dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Add product"
-        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/view21" />
 
     <Button
         android:id="@+id/buttonAlegeImagineProdus"
-        android:layout_width="116dp"
+        android:layout_width="128dp"
         android:layout_height="64dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round_bg"
         android:text="Choose image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextLungime"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextLungime"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLungime" />
 
     <ImageView
         android:id="@+id/imageViewImagineProdus"
-        android:layout_width="130dp"
-        android:layout_height="145dp"
+        android:layout_width="128dp"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@+id/buttonAlegeImagineProdus"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/buttonAlegeImagineProdus"
         app:layout_constraintTop_toBottomOf="@+id/buttonAlegeImagineProdus"
         app:srcCompat="@drawable/ic_launcher_background" />
