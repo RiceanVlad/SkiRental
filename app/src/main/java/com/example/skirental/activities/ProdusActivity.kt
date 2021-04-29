@@ -1,5 +1,6 @@
 package com.example.skirental.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,6 +10,7 @@ import com.example.skirental.adapters.ProdusRecyclerAdapter
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Produs
 import com.example.skirental.models.ProdusFinal
+import kotlinx.android.synthetic.main.activity_produs.*
 
 class ProdusActivity : AppCompatActivity(), ProdusRecyclerAdapter.OnItemClickListener {
 
@@ -23,6 +25,14 @@ class ProdusActivity : AppCompatActivity(), ProdusRecyclerAdapter.OnItemClickLis
         adaugaProduseInCos()
         initRecyclerView()
         addDataSet(listaProdus)
+        butoane()
+    }
+
+    private fun butoane() {
+        buttonPlata.setOnClickListener {
+            val intent1 = Intent(this@ProdusActivity,PlataActivity::class.java)
+            startActivity(intent1)
+        }
     }
 
     private fun adaugaProduseInCos() {

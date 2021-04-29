@@ -22,8 +22,9 @@ class ModificareDateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modificare_date)
 
-        preluareDateDinBD()
         butoane()
+        preluareDateDinBD()
+
     }
 
     private fun preluareDateDinBD() {

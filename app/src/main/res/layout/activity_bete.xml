@@ -42,15 +42,17 @@
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonBete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="92dp"
-        android:clickable="true"
+    <Button
+        android:id="@+id/buttonSkipBete"
+        android:layout_width="78dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/round_bg"
+        android:text="Skip"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_media_next" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

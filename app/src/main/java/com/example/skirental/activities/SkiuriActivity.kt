@@ -34,7 +34,7 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
     }
 
     private fun butoane() {
-        floatingActionButtonSchiuri.setOnClickListener {
+        buttonSkipSchiuri.setOnClickListener {
             val intent1 = Intent(this, ClapariActivity::class.java)
 
             //trimit info necesare ale clientului
