@@ -1,8 +1,7 @@
 package com.example.skirental.activities
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.databinding.ActivityCreateAccountBinding
 import com.google.firebase.firestore.FirebaseFirestore
@@ -24,43 +23,16 @@ class CreateAccountActivity : AppCompatActivity() {
     }
 
     private fun butoane(){
-        binding.buttonCreate.setOnClickListener(){
 
-            utilizatori
-                    .whereEqualTo("email",binding.editTextCreazaEmail.text.toString())
-                    .get()
-                    .addOnSuccessListener { documents ->
-                        if(documents.size() > 0){
-                            // afiseaza ca exista email
-                            Toast.makeText(this, "Email already exists.", Toast.LENGTH_SHORT).show()
-                        }else{
-                            //se adauga cont in baza de date
-                            adaugaContInBazaDeDate()
-                        }
-                    }
-                    .addOnFailureListener{ exception ->
-                        Log.w(TAG,"Error getting documents: ", exception)
-                    }
+        binding.buttonNext.setOnClickListener {
+            val intent = Intent(this,CreateAccount2Activity::class.java)
+            intent.putExtra("nume",binding.editTextNume.text.toString())
+            intent.putExtra("email",binding.editTextCreazaEmail.text.toString())
+            intent.putExtra("parola",binding.editTextParola.text.toString())
+            startActivity(intent)
         }
     }
 
-    private fun adaugaContInBazaDeDate(){
-        var sex : Boolean = false
-        if(binding.chipM.isChecked)
-            sex = true
-        val data = hashMapOf(
-                "nume" to binding.editTextNume.text.toString(),
-                "email" to binding.editTextCreazaEmail.text.toString(),
-                "parola" to binding.editTextParola.text.toString(),
-                "greutate" to binding.editTextGreutate.text.toString().toInt(),
-                "inaltime" to binding.editTextInaltime.text.toString().toInt(),
-                "marimepicior" to binding.editTextMarimePicior.text.toString().toInt(),
-                "nivel" to binding.editTextDificultate.text.toString().toInt(),
-                "sex" to sex,
-                "varsta" to binding.editTextVarsta.text.toString().toInt()
-        )
-        Toast.makeText(this, "Account succesfully created.", Toast.LENGTH_SHORT).show()
-        utilizatori.document().set(data)
-    }
+
 
 }

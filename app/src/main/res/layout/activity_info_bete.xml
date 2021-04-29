@@ -6,37 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".infoactivities.InfoBeteActivity">
 
-    <TextView
-        android:id="@+id/textViewBeteInfo"
-        android:layout_width="248dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="60dp"
-        android:text="Ski information"
-        android:textSize="36sp"
+    <View
+        android:id="@+id/view18"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textViewBeteInfo"
+        android:layout_width="292dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Poles Information"
+        android:textColor="@color/colorSecondary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view18" />
+
+    <TextView
         android:id="@+id/textViewFirmaBete3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="172dp"
-        android:layout_marginEnd="287dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Brand"
+        android:textColor="@color/colorSecondary"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewBeteInfo" />
 
     <TextView
         android:id="@+id/textViewBrandBeteS"
         android:layout_width="303dp"
         android:layout_height="56dp"
         android:layout_marginTop="12dp"
+        android:background="@drawable/round_border_pink"
+        android:padding="16dp"
+        android:textColor="@color/colorSecondary"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textViewFirmaBete3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textViewFirmaBete3"
@@ -47,7 +67,11 @@
         android:layout_width="304dp"
         android:layout_height="187dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/round_border_big"
+        android:padding="8dp"
+        android:textColor="@color/colorSecondary"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textViewBrandBeteS"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textViewBrandBeteS"
@@ -55,12 +79,18 @@
 
     <Button
         android:id="@+id/buttonAlegeBete"
-        android:layout_width="114dp"
-        android:layout_height="69dp"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="112dp"
+        android:layout_width="293dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/colorSecondary"
         android:text="Choose poles"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescriereBete" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

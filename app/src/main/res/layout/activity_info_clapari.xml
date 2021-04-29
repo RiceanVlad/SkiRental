@@ -6,39 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".infoactivities.InfoClapariActivity">
 
-    <TextView
-        android:id="@+id/textViewClapariInfo"
-        android:layout_width="248dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="77dp"
-        android:text="Ski information"
-        android:textSize="36sp"
+    <View
+        android:id="@+id/view16"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textViewClapariInfo"
+        android:layout_width="304dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Boots Information"
+        android:textColor="@color/colorSecondary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view16" />
+
+    <TextView
         android:id="@+id/textViewFirmaClapari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="164dp"
-        android:layout_marginEnd="287dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:text="Brand"
+        android:textColor="@color/colorSecondary"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewClapariInfo" />
 
     <TextView
         android:id="@+id/textViewBrandClapariS"
         android:layout_width="303dp"
         android:layout_height="56dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/round_border_pink"
+        android:padding="16dp"
+        android:textColor="@color/colorSecondary"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textViewFirmaClapari"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textViewFirmaClapari"
@@ -49,7 +66,11 @@
         android:layout_width="304dp"
         android:layout_height="187dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/round_border_big"
+        android:padding="8dp"
+        android:textColor="@color/colorSecondary"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textViewBrandClapariS"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textViewBrandClapariS"
@@ -57,13 +78,17 @@
 
     <Button
         android:id="@+id/buttonAlegeClapari"
-        android:layout_width="114dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="232dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="129dp"
+        android:layout_width="307dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/colorSecondary"
         android:text="Choose boots"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClapariDescriere" />
 </androidx.constraintlayout.widget.ConstraintLayout>

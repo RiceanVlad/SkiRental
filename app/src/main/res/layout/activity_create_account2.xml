@@ -6,11 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".activities.CreateAccount2Activity">
 
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_bg"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarAlegeDif"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/seekBarAlegeDif"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarAlegeDif"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="F"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="M"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </com.google.android.material.chip.ChipGroup>
+
     <View
         android:id="@+id/view8"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:background="@drawable/ic_wave5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view7" />
 
     <View
@@ -44,41 +79,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view8" />
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
-        android:layout_width="109dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/round_border"
-        app:layout_constraintEnd_toEndOf="@+id/seekBar"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/seekBar"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar"
-        app:singleSelection="true">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checkable="true"
-            android:text="F"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checkable="true"
-            android:text="M"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </com.google.android.material.chip.ChipGroup>
-
     <EditText
-        android:id="@+id/editTextInaltime2"
+        android:id="@+id/editTextInaltime"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -97,7 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextVarsta" />
 
     <EditText
-        android:id="@+id/editTextMarimePicior2"
+        android:id="@+id/editTextMarimePicior"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -111,13 +113,13 @@
         android:paddingStart="16dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextInaltime2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextInaltime"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextInaltime2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextInaltime2" />
+        app:layout_constraintStart_toStartOf="@+id/editTextInaltime"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInaltime" />
 
     <EditText
-        android:id="@+id/editTextGreutate2"
+        android:id="@+id/editTextGreutate"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -131,22 +133,9 @@
         android:paddingStart="16dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextMarimePicior2"
-        app:layout_constraintStart_toStartOf="@+id/editTextMarimePicior2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextMarimePicior2" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="Sex"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/chipGroup"
-        app:layout_constraintEnd_toStartOf="@+id/chipGroup"
-        app:layout_constraintTop_toTopOf="@+id/chipGroup" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextMarimePicior"
+        app:layout_constraintStart_toStartOf="@+id/editTextMarimePicior"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMarimePicior" />
 
     <TextView
         android:id="@+id/textView13"
@@ -165,7 +154,7 @@
         app:layout_constraintTop_toTopOf="@+id/view7" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/seekBarAlegeDif"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="250dp"
         android:layout_height="50dp"
@@ -173,10 +162,10 @@
         android:background="@drawable/round_border"
         android:max="5"
         android:progress="1"
-        app:layout_constraintEnd_toEndOf="@+id/editTextGreutate2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextGreutate"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextGreutate2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextGreutate2" />
+        app:layout_constraintStart_toStartOf="@+id/editTextGreutate"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGreutate" />
 
     <TextView
         android:id="@+id/textView14"
@@ -187,16 +176,15 @@
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/seekBar"
-        app:layout_constraintEnd_toStartOf="@+id/seekBar"
-        app:layout_constraintTop_toTopOf="@+id/seekBar"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarAlegeDif"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarAlegeDif"
+        app:layout_constraintTop_toTopOf="@+id/seekBarAlegeDif"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/round_bg"
@@ -204,8 +192,9 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toEndOf="@+id/chipGroup"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/seekBarAlegeDif" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -229,5 +218,19 @@
         app:layout_constraintStart_toEndOf="@+id/textView13"
         app:layout_constraintTop_toTopOf="@+id/textView13"
         app:srcCompat="@drawable/ic_baseline_how_to_reg_24" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="40dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="40dp"
+        android:text="Sex"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chipGroup"
+        app:layout_constraintEnd_toStartOf="@+id/chipGroup"
+        app:layout_constraintTop_toTopOf="@+id/chipGroup"
+        app:layout_constraintVertical_bias="0.523" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

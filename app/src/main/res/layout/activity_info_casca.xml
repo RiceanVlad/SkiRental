@@ -6,12 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".infoactivities.InfoCascaActivity">
 
+    <View
+        android:id="@+id/view17"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textViewCascaDescriere"
         android:layout_width="304dp"
         android:layout_height="187dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/round_border_big"
+        android:padding="8dp"
+        android:textColor="@color/colorSecondary"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textViewBrandCascaS"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textViewBrandCascaS"
@@ -21,35 +34,44 @@
         android:id="@+id/textViewCascaInfo"
         android:layout_width="322dp"
         android:layout_height="75dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="35dp"
-        android:text="Helmet information"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Helmet Information"
+        android:textColor="@color/colorSecondary"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/view17" />
 
     <TextView
         android:id="@+id/textViewBrandC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="296dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:text="Brand"
+        android:textColor="@color/colorSecondary"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCascaInfo" />
 
     <TextView
         android:id="@+id/textViewBrandCascaS"
         android:layout_width="303dp"
         android:layout_height="56dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/round_border_pink"
+        android:padding="16dp"
+        android:textColor="@color/colorSecondary"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textViewBrandC"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textViewBrandC"
@@ -57,14 +79,19 @@
 
     <Button
         android:id="@+id/buttonAlegeCasca"
-        android:layout_width="114dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="232dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="129dp"
+        android:layout_width="299dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/colorSecondary"
         android:text="Choose helmet"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCascaDescriere" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
