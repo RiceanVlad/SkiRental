@@ -6,12 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".infoactivities.InfoOchelariActivity">
 
+    <View
+        android:id="@+id/view15"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textViewOchelariDescriere"
         android:layout_width="304dp"
         android:layout_height="187dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/round_border_big"
+        android:padding="8dp"
+        android:textColor="@color/colorSecondary"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textViewOchelariBrandS"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textViewOchelariBrandS"
@@ -22,7 +35,11 @@
         android:layout_width="303dp"
         android:layout_height="56dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/round_border_pink"
+        android:padding="16dp"
+        android:textColor="@color/colorSecondary"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textViewOchelariBrand"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textViewOchelariBrand"
@@ -30,44 +47,46 @@
 
     <TextView
         android:id="@+id/textViewOchelariInfo"
-        android:layout_width="196dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginEnd="177dp"
-        android:text="Snow goggles information"
+        android:layout_width="211dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Snow Goggles Information"
+        android:textColor="@color/colorSecondary"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintTop_toBottomOf="@+id/view15" />
 
     <Button
         android:id="@+id/buttonAlegeOchelari"
-        android:layout_width="115dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="246dp"
-        android:layout_marginEnd="72dp"
+        android:layout_width="306dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorSecondary"
         android:text="Choose snow goggles"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.805" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewOchelariDescriere" />
 
     <TextView
         android:id="@+id/textViewOchelariBrand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="172dp"
-        android:layout_marginEnd="269dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:text="Brand"
+        android:textColor="@color/colorSecondary"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewOchelariInfo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

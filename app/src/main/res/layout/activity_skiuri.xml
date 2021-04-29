@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".activities.SkiuriActivity">
 
+    <View
+        android:id="@+id/view9"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_wave2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="411dp"
@@ -19,20 +28,19 @@
 
     <TextView
         android:id="@+id/textViewAlegeSkiuri"
-        android:layout_width="201dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="6dp"
+        android:layout_width="218dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="11dp"
-        android:text="Choose skis"
+        android:layout_marginBottom="16dp"
+        android:text="Choose Skis"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButtonSchiuri"
@@ -44,4 +52,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_media_next" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
