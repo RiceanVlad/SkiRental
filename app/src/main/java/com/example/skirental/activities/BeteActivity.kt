@@ -27,6 +27,23 @@ class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListene
         setContentView(R.layout.activity_bete)
 
         preiaBeteDinBD()
+
+        butoane()
+    }
+
+    private fun butoane() {
+        floatingActionButtonBete.setOnClickListener {
+            val intent1 = Intent(this, CascaActivity::class.java)
+            intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+            intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+            intent1.putExtra("sex",intent.getStringExtra("sex"))
+            intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+            intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
+            intent1.putExtra("clapari",intent.getSerializableExtra("clapari") as? Produs)
+            intent1.putExtra("bete",Produs("null","",""))
+
+            startActivity(intent1)
+        }
     }
 
     private fun preiaBeteDinBD(){

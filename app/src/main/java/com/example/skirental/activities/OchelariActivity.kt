@@ -13,6 +13,7 @@ import com.example.skirental.infoactivities.InfoOchelariActivity
 import com.example.skirental.miscellaneous.TopSpacingItemDecoration
 import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_ochelari.*
 
 class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClickListener {
 
@@ -26,6 +27,24 @@ class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClic
         setContentView(R.layout.activity_ochelari)
 
         preiaOchelariDinBD()
+        butoane()
+    }
+
+    private fun butoane() {
+        floatingActionButtonOchelari.setOnClickListener {
+            val intent1 = Intent(this, ProdusActivity::class.java)
+            intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+            intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+            intent1.putExtra("sex",intent.getStringExtra("sex"))
+            intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+            intent1.putExtra("schiuri",intent.getSerializableExtra("schiuri") as? Produs)
+            intent1.putExtra("clapari",intent.getSerializableExtra("clapari") as? Produs)
+            intent1.putExtra("bete",intent.getSerializableExtra("bete") as? Produs)
+            intent1.putExtra("casca",intent.getSerializableExtra("casca") as? Produs)
+            intent1.putExtra("ochelari",Produs("null","",""))
+
+            startActivity(intent1)
+        }
     }
 
     private fun preiaOchelariDinBD(){

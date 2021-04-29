@@ -2,15 +2,20 @@ package com.example.skirental.infoactivities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.activities.OchelariActivity
 import com.example.skirental.databinding.ActivityInfoCascaBinding
 import com.example.skirental.models.Produs
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_info_casca.*
 
 class InfoCascaActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInfoCascaBinding
+    private val db = FirebaseFirestore.getInstance()
+    private val TAG = "vlad"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +39,15 @@ class InfoCascaActivity : AppCompatActivity() {
             intent1.putExtra("clapari",intent.getSerializableExtra("clapari") as? Produs)
             intent1.putExtra("bete",intent.getSerializableExtra("bete") as? Produs)
             intent1.putExtra("casca",intent.getSerializableExtra("casca") as? Produs)
+
+            val produs : Produs = intent.getSerializableExtra("casca") as Produs
+
+            //update inchiriat = true
+            db.collection("casca").document(produs.imagine)
+                .update("inchiriat",true)
+                .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully updated!") }
+                .addOnFailureListener { e -> Log.w(TAG, "Error updating document", e) }
+
             startActivity(intent1)
         }
     }

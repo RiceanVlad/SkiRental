@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
             }
             
         }
-        binding.buttonCreateAccount.setOnClickListener{
+        binding.textViewNewUser.setOnClickListener {
             val intent = Intent(this, CreateAccountActivity::class.java)
             startActivity(intent);
         }

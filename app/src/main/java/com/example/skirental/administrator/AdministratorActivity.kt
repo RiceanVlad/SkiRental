@@ -24,5 +24,9 @@ class AdministratorActivity : AppCompatActivity() {
             val intent = Intent(this,DeleteProductsActivity::class.java)
             startActivity(intent)
         }
+        buttonReturnareProdus.setOnClickListener {
+            val intent = Intent(this,CodeScanerActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

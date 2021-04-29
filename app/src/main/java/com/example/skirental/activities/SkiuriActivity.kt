@@ -35,7 +35,18 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
 
     private fun butoane() {
         floatingActionButtonSchiuri.setOnClickListener {
+            val intent1 = Intent(this, ClapariActivity::class.java)
 
+            //trimit info necesare ale clientului
+            intent1.putExtra("inaltime",intent.getStringExtra("inaltime"))
+            intent1.putExtra("marimepicior",intent.getStringExtra("marimepicior"))
+            intent1.putExtra("sex",intent.getStringExtra("sex"))
+            intent1.putExtra("varsta",intent.getStringExtra("varsta"))
+
+            //trimt obiectul produs
+            intent1.putExtra("schiuri",Produs("null","",""))
+
+            startActivity(intent1)
         }
     }
 
@@ -80,8 +91,10 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
     }
 
     override fun onItemClick(position: Int) {
+
         Toast.makeText(this, "Item $position clicked!", Toast.LENGTH_SHORT).show()
         val clickedItem: Produs = listaSkiuri[position]
+
         skiuriAdapter.notifyItemChanged(position)
         val intent1 = Intent(this, InfoSkiuriActivity::class.java)
 
@@ -100,7 +113,6 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
 
         startActivity(intent1)
     }
-
 
 }
 

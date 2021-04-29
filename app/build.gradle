@@ -66,4 +66,7 @@ dependencies {
     apply plugin: "kotlin-android"
     apply plugin: "kotlin-android-extensions"
 
+    //qr code scanner
+    implementation 'com.journeyapps:zxing-android-embedded:4.2.0'
+
 }

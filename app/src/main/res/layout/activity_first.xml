@@ -4,46 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundskiactivity"
     tools:context=".activities.FirstActivity">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewWelcome"
-        android:layout_width="245dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="83dp"
-        android:layout_marginBottom="640dp"
-        android:text="Good day customer!"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="289dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:text="Good Day Customer!"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonRentSkiEquipment"
-        android:layout_width="169dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="296dp"
-        android:layout_marginEnd="121dp"
-        android:layout_marginBottom="363dp"
+        android:layout_width="319dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/round_bg"
         android:text="Rent your ski equipment"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
 
     <Button
         android:id="@+id/buttonModificareDatePersonale"
-        android:layout_width="162dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="319dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/round_bg"
         android:text="Modify personal data"
-        app:layout_constraintEnd_toEndOf="@+id/buttonRentSkiEquipment"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="@+id/buttonRentSkiEquipment"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonRentSkiEquipment" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="155dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:srcCompat="@drawable/teleski" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
