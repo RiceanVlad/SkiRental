@@ -19,6 +19,7 @@ class FormularAdaugareActivity : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()
     private val TAG = "vlad"
     lateinit var filepath : Uri
+    private  var alesImg = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,19 +32,23 @@ class FormularAdaugareActivity : AppCompatActivity() {
 
     private fun butoane() {
         buttonAdaugaProdus.setOnClickListener {
-            if(intent.getStringExtra("produs").equals("schiuri"))
-                adaugaSchiuri()
-            if(intent.getStringExtra("produs").equals("clapari"))
-                adaugaClapari()
-            if(intent.getStringExtra("produs").equals("bete"))
-                adaugaBete()
-            if(intent.getStringExtra("produs").equals("casca"))
-                adaugaCasca()
-            if(intent.getStringExtra("produs").equals("ochelari"))
-                adaugaOchelari()
 
+            if(!alesImg){
+                Toast.makeText(this, "Please choose an image first.", Toast.LENGTH_SHORT).show()
+            } else{
+                if(intent.getStringExtra("produs").equals("schiuri"))
+                    adaugaSchiuri()
+                if(intent.getStringExtra("produs").equals("clapari"))
+                    adaugaClapari()
+                if(intent.getStringExtra("produs").equals("bete"))
+                    adaugaBete()
+                if(intent.getStringExtra("produs").equals("casca"))
+                    adaugaCasca()
+                if(intent.getStringExtra("produs").equals("ochelari"))
+                    adaugaOchelari()
+            }
         }
-        buttonAlegeImagineProdus.setOnClickListener {
+        imageViewImagineProdus.setOnClickListener {
             startFileChooser()
         }
     }
@@ -219,6 +224,7 @@ class FormularAdaugareActivity : AppCompatActivity() {
             filepath = data.data!!
             var bitmap = MediaStore.Images.Media.getBitmap(contentResolver,filepath)
             imageViewImagineProdus.setImageBitmap(bitmap)
+            alesImg = true
         }
     }
 }

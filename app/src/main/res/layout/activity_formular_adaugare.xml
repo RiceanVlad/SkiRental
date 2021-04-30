@@ -149,29 +149,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view21" />
 
-    <Button
-        android:id="@+id/buttonAlegeImagineProdus"
-        android:layout_width="128dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/round_bg"
-        android:text="Choose image"
-        android:textSize="18sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/imageViewImagineProdus"
+        android:layout_width="131dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextLungime"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextLungime"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLungime" />
-
-    <ImageView
-        android:id="@+id/imageViewImagineProdus"
-        android:layout_width="128dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/buttonAlegeImagineProdus"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/buttonAlegeImagineProdus"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAlegeImagineProdus"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLungime"
+        app:srcCompat="@drawable/ic_add_photo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

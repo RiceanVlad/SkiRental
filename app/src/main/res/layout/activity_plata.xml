@@ -6,28 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".activities.PlataActivity">
 
+    <View
+        android:id="@+id/view27"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="273dp"
-        android:layout_height="73dp"
+        android:layout_width="252dp"
+        android:layout_height="71dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/round_border_big_blue"
+        android:paddingStart="16dp"
         android:text="Thank you for your rent payment. We are waiting for you at the Ski Resort."
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/view27" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="224dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
         android:text="Happy skiing!"
         android:textColor="@color/colorSecondary"
