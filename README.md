@@ -1,4 +1,5 @@
 # SkiRental - My first app
-Android app to rent ski equipment
+SkiRental is an Android application for renting ski equipment. SkiRental allows you to rent ski equipment from a ski resort, so when you arrive at the ski resort, they have the equipment ready for you.
 
-![1](https://user-images.githubusercontent.com/61254142/116677044-680db880-a9b0-11eb-8cb4-9688dfe25e5f.png)
+
+
