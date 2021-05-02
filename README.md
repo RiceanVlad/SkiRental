@@ -80,8 +80,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 I was looking for renting ski equipment mobile apps and couldn't find any so i made my own. The Ski Rental app is about renting ski equipment before you arrive at some ski resort, so they have the equipment up and ready for your arrival.
 
 Here's why:
@@ -89,6 +87,48 @@ Here's why:
 * It's more convenient, just pay online
 * You can choose your favorite equipment
 * It's coronavirus safe, less people wait in lines :smile:
+
+### How it works
+
+Here i will post some screenshots to ilustrate how the app works.
+
+1. Login screen
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/screenshot.png?raw=true)
+
+2. Some basic customer choices
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/first.png?raw=true)
+
+3. Choosing equipment based on your personal information (height, foot size, sex)
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/gif.gif?raw=true)
+
+4. Easy registration in 2 steps
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/reg1.png?raw=true)
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/reg2.png?raw=true)
+
+5. What can the administrator do?
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/adminmain.png?raw=true)
+
+6. Administrator can choose what type of product to add
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/chooseadd.png?raw=true)
+
+7. Example of adding a helmet
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/addhelmet.png?raw=true)
+
+8. Administrator can remove products from the database
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/delete.png?raw=true)
+
+9. The administrator can return products so that they can be rented again.
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan1.png?raw=true)
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan2.png?raw=true)
 
 ### Built With
 
