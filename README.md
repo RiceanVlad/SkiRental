@@ -171,14 +171,6 @@ Here i will post some screenshots to ilustrate how the app works.
 ![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan1.png?raw=true)
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/RiceanVlad/SkiRental/issues) for a list of proposed features (and known issues).
-
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -192,19 +184,12 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Ioan-Vlad Ricean - [@e-uvt.ro](ioan.ricean95@e-uvt.ro) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/RiceanVlad/SkiRental](https://github.com/RiceanVlad/SkiRental)
 
 
 
