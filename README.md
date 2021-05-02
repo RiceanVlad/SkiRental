@@ -37,7 +37,6 @@
     <a href="https://github.com/RiceanVlad/SkiRental"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/RiceanVlad/SkiRental">View Demo</a>
     ·
     <a href="https://github.com/RiceanVlad/SkiRental/issues">Report Bug</a>
     ·
