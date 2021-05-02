@@ -88,48 +88,6 @@ Here's why:
 * You can choose your favorite equipment
 * It's coronavirus safe, less people wait in lines :smile:
 
-### How it works
-
-Here i will post some screenshots to ilustrate how the app works.
-
-1. Login screen
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/screenshot.png?raw=true)
-
-2. Some basic customer choices
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/first.png?raw=true)
-
-3. Choosing equipment based on your personal information (height, foot size, sex)
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/gif.gif?raw=true)
-
-4. Easy registration in 2 steps
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/reg1.png?raw=true)
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/reg2.png?raw=true)
-
-5. What can the administrator do?
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/adminmain.png?raw=true)
-
-6. Administrator can choose what type of product to add
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/chooseadd.png?raw=true)
-
-7. Example of adding a helmet
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/addhelmet.png?raw=true)
-
-8. Administrator can remove products from the database
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/delete.png?raw=true)
-
-9. The administrator can return products through barcode/QR scanning so that they can be rented again.
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan2.png?raw=true)
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan1.png?raw=true)
-
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
@@ -172,9 +130,45 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Here i will post some screenshots to ilustrate how the app works.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Login screen
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/screenshot.png?raw=true)
+
+2. Some basic customer choices
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/first.png?raw=true)
+
+3. Choosing equipment based on your personal information (height, foot size, sex)
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/gif.gif?raw=true)
+
+4. Easy registration in 2 steps
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/reg1.png?raw=true)
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/reg2.png?raw=true)
+
+5. What can the administrator do?
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/adminmain.png?raw=true)
+
+6. Administrator can choose what type of product to add
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/chooseadd.png?raw=true)
+
+7. Example of adding a helmet
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/addhelmet.png?raw=true)
+
+8. Administrator can remove products from the database
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/delete.png?raw=true)
+
+9. The administrator can return products through barcode/QR scanning so that they can be rented again.
+
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan2.png?raw=true)
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan1.png?raw=true)
 
 
 
