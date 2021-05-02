@@ -187,7 +187,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Ioan-Vlad Ricean - [@e-uvt.ro](ioan.ricean95@e-uvt.ro) - email@example.com
+Ioan-Vlad Ricean - [ioan.ricean95@e-uvt.ro](ioan.ricean95@e-uvt.ro)
 
 Project Link: [https://github.com/RiceanVlad/SkiRental](https://github.com/RiceanVlad/SkiRental)
 
