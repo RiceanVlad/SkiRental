@@ -100,7 +100,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * Android studio
   You can download it here: https://developer.android.com/studio
 
@@ -197,16 +196,11 @@ Project Link: [https://github.com/RiceanVlad/SkiRental](https://github.com/Ricea
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/RiceanVlad/SkiRental.svg?style=for-the-badge
 [contributors-url]: https://github.com/RiceanVlad/SkiRental/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/RiceanVlad/SkiRental.svg?style=for-the-badge
 [forks-url]: https://github.com/RiceanVlad/SkiRental/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/RiceanVlad/SkiRental.svg?style=for-the-badge
 [stars-url]: https://github.com/RiceanVlad/SkiRental/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/RiceanVlad/SkiRental.svg?style=for-the-badge
 [issues-url]: https://github.com/RiceanVlad/SkiRental/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/RiceanVlad/SkiRental/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
