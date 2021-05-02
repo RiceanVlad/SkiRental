@@ -104,7 +104,7 @@ To get a local copy up and running follow these simple example steps.
 
 You just Clone the repo
    ```sh
-   git clone (https://github.com/your_username_/Project-Name.git)
+   git clone (https://github.com/RiceanVlad/SkiRental.git)
    ```
 
 <!-- USAGE EXAMPLES -->
