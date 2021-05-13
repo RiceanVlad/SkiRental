@@ -156,7 +156,7 @@ Here i will post some screenshots to ilustrate how the app works.
 
 ## Diagram
 
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/diagramaFinala.png?raw=true)
+![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/diagramaFinala1.png?raw=true)
 
 ## Extra Documentation
 
