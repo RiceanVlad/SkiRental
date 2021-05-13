@@ -153,7 +153,7 @@ Here i will post some screenshots to ilustrate how the app works.
 
 ## Extra Documentation
 
-More documentation [here](https://github.com/RiceanVlad/SkiRental/tree/main/documentation) generated with kdoc from [dokka kdoc](https://github.com/Kotlin/dokka)
+More documentation [here](https://github.com/RiceanVlad/SkiRental/tree/main/documentation) generated with kdoc from [dokka](https://github.com/Kotlin/dokka)
 
 <!-- CONTRIBUTING -->
 ## Contributing
