@@ -66,6 +66,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#extra-documentation">Extra Documentation</a></li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#conclusions-and-future-work">Conclusions and future work</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -166,7 +167,11 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## Conclusions and future work
 
+On the future I'm planning to be able to rent equipment based on a specific date.
+I'm also thinking into implementing give away gift cards for some customers.
+Possibly implement percentage usage of equipment.
 
 <!-- CONTACT -->
 ## Contact
@@ -175,6 +180,9 @@ Ricean Ioan-Vlad - [ioan.ricean95@e-uvt.ro](ioan.ricean95@e-uvt.ro)
 
 Project Link: [https://github.com/RiceanVlad/SkiRental](https://github.com/RiceanVlad/SkiRental)
 
+School subject: Programming on Mobile Devices
+
+Date of dispatch: 13.05.2021
 
 
 <!-- ACKNOWLEDGEMENTS -->
