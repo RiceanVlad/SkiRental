@@ -64,7 +64,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#documentation">Extra Documentation</a></li>
+    <li><a href="#extra-documentation">Extra Documentation</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -151,9 +151,9 @@ Here i will post some screenshots to ilustrate how the app works.
 ![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan2.png?raw=true)
 ![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan1.png?raw=true)
 
-## Documentation
+## Extra Documentation
 
-wqe
+asd
 
 <!-- CONTRIBUTING -->
 ## Contributing
