@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.R
 import kotlinx.android.synthetic.main.activity_delete_products.*
 
+/**
+ * Choose what type of product to delete
+ */
 class DeleteProductsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,6 +17,14 @@ class DeleteProductsActivity : AppCompatActivity() {
         butoane()
     }
 
+    /**
+     * Buttons in this activity
+     * @param buttonStergeSchiuri delete skis
+     * @param buttonStergeClapari delete poles
+     * @param buttonStergeBete delete helmet
+     * @param buttonStergeCasca delete goggles
+     * @param buttonStergeOchelari delete boots
+     */
     private fun butoane() {
         buttonStergeSchiuri.setOnClickListener {
             val intent = Intent(this,AfisareProduseActivity::class.java)

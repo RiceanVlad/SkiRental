@@ -2,7 +2,13 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'com.google.gms.google-services'
+    id("org.jetbrains.dokka") version "1.4.32"
 }
+
+repositories {
+    mavenCentral()
+}
+
 
 android {
     compileSdkVersion 30
@@ -69,4 +75,14 @@ dependencies {
     //qr code scanner
     implementation 'com.journeyapps:zxing-android-embedded:4.2.0'
 
+    //dokka ktdoc
+    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.4.32")
+
+}
+dokkaHtml.configure {
+    dokkaSourceSets {
+        named("main") {
+            noAndroidSdkLink.set(false)
+        }
+    }
 }

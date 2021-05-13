@@ -11,6 +11,9 @@ import com.example.skirental.R
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_modificare_date.*
 
+/**
+ * User modifies personal data (in the Firestore database)
+ */
 class ModificareDateActivity : AppCompatActivity() {
 
     private val db = FirebaseFirestore.getInstance()
@@ -27,6 +30,9 @@ class ModificareDateActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Extract user data from database
+     */
     private fun preluareDateDinBD() {
         db.collection("users")
             .whereEqualTo("email",intent.getStringExtra("email"))
@@ -61,6 +67,10 @@ class ModificareDateActivity : AppCompatActivity() {
             }
     }
 
+    /**
+     * Buttons on this activity
+     * @param buttonModificaDate Update data to database
+     */
     private fun butoane() {
         buttonModificaDate.setOnClickListener {
 
@@ -94,6 +104,9 @@ class ModificareDateActivity : AppCompatActivity() {
         })
     }
 
+    /**
+     * Update user data in database
+     */
     private fun updateInBD() {
 
         var sex = true

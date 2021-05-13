@@ -12,6 +12,9 @@ import com.example.skirental.databinding.ActivityMainBinding
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ *  This is the main class/ the login screen
+ */
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +30,11 @@ class MainActivity : AppCompatActivity() {
         butoaneMain()
     }
 
+    /**
+     *  Here are all the buttons on this activity
+     *  @param buttonLogin Login button
+     *  @param textViewNewUser Make an account
+     */
     private fun butoaneMain(){
         binding.buttonLogin.setOnClickListener{
 

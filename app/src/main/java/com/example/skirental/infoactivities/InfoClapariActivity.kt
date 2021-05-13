@@ -11,6 +11,9 @@ import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_info_clapari.*
 
+/**
+ * Show's information about the chosen boots
+ */
 class InfoClapariActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInfoClapariBinding
@@ -29,6 +32,10 @@ class InfoClapariActivity : AppCompatActivity() {
         butoane()
     }
 
+    /**
+     * Buttons on this activity
+     * @param buttonAlegeClapari set boots rent=true in database
+     */
     private fun butoane(){
         binding.buttonAlegeClapari.setOnClickListener(){
             Toast.makeText(this, "click", Toast.LENGTH_SHORT).show()

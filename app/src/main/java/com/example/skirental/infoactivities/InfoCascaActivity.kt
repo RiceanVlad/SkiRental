@@ -10,6 +10,9 @@ import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_info_casca.*
 
+/**
+ * Show's information about the chosen helmet
+ */
 class InfoCascaActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInfoCascaBinding
@@ -28,6 +31,10 @@ class InfoCascaActivity : AppCompatActivity() {
         butoane()
     }
 
+    /**
+     * Buttons on this activity
+     * @param buttonAlegeCasca set helmet rent=true in database
+     */
     private fun butoane(){
         binding.buttonAlegeCasca.setOnClickListener(){
             var intent1 = Intent(this, OchelariActivity::class.java)

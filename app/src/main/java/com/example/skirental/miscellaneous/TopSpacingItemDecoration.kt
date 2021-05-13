@@ -4,6 +4,9 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
+/**
+ * Set space at top of recycler view
+ */
 class TopSpacingItemDecoration (private val padding: Int): RecyclerView.ItemDecoration(){
     override fun getItemOffsets(
         outRect: Rect,

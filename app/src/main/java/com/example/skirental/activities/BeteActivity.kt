@@ -15,6 +15,9 @@ import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_bete.*
 
+/**
+ * Recycler view for all the poles
+ */
 class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListener {
 
     private lateinit var beteAdapter: BeteRecyclerAdapter
@@ -31,6 +34,10 @@ class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListene
         butoane()
     }
 
+    /**
+     * Buttons in this activity
+     * @param buttonSkipBete user skips choosing poles
+     */
     private fun butoane() {
         buttonSkipBete.setOnClickListener {
             val intent1 = Intent(this, CascaActivity::class.java)
@@ -46,6 +53,9 @@ class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListene
         }
     }
 
+    /**
+     * Extract poles from database
+     */
     private fun preiaBeteDinBD(){
         var sem : Boolean = false
         db.collection("bete")
@@ -86,6 +96,9 @@ class BeteActivity : AppCompatActivity(), BeteRecyclerAdapter.OnItemClickListene
 
     }
 
+    /**
+     * If item is clicked then go to poles info activity and pass required data
+     */
     override fun onItemClick(position: Int) {
         val clickedItem: Produs = listaBete[position]
         beteAdapter.notifyItemChanged(position)

@@ -12,6 +12,9 @@ import com.example.skirental.models.Produs
 import com.example.skirental.models.ProdusFinal
 import kotlinx.android.synthetic.main.activity_produs.*
 
+/**
+ * Recycler view to store the shopping basket
+ */
 class ProdusActivity : AppCompatActivity(), ProdusRecyclerAdapter.OnItemClickListener {
 
     private lateinit var produsAdapter: ProdusRecyclerAdapter
@@ -28,6 +31,10 @@ class ProdusActivity : AppCompatActivity(), ProdusRecyclerAdapter.OnItemClickLis
         butoane()
     }
 
+    /**
+     * Buttons in this activity
+     * @param buttonPlata payment
+     */
     private fun butoane() {
         buttonPlata.setOnClickListener {
             val intent1 = Intent(this@ProdusActivity,PlataActivity::class.java)
@@ -35,6 +42,9 @@ class ProdusActivity : AppCompatActivity(), ProdusRecyclerAdapter.OnItemClickLis
         }
     }
 
+    /**
+     * Add products chosen in a list
+     */
     private fun adaugaProduseInCos() {
         p = intent.getSerializableExtra("schiuri") as Produs
         if(!p.firma.equals("null"))

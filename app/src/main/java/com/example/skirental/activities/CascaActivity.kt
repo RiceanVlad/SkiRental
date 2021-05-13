@@ -15,6 +15,9 @@ import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_casca.*
 
+/**
+ * Recycler view for all the helmets
+ */
 class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListener {
 
     private lateinit var cascaAdapter: CascaRecyclerAdapter
@@ -30,6 +33,10 @@ class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListe
         butoane()
     }
 
+    /**
+     * Buttons in this activity
+     * @param buttonSkipCasca user skips choosing helmet
+     */
     private fun butoane() {
         buttonSkipCasca.setOnClickListener {
             val intent1 = Intent(this, OchelariActivity::class.java)
@@ -46,6 +53,9 @@ class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListe
         }
     }
 
+    /**
+     * Extract helmets from database
+     */
     private fun preiaCastiDinBD(){
         val sem : Boolean = false
         var adult : Boolean
@@ -93,6 +103,9 @@ class CascaActivity : AppCompatActivity(), CascaRecyclerAdapter.OnItemClickListe
 
     }
 
+    /**
+     * If item is clicked then go to helmet info activity and pass required data
+     */
     override fun onItemClick(position: Int) {
         val clickedItem: Produs = listaCasti[position]
         cascaAdapter.notifyItemChanged(position)

@@ -15,6 +15,9 @@ import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_clapari.*
 
+/**
+ * Recycler view for all the boots
+ */
 class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickListener {
 
     private lateinit var clapariAdapter: ClapariRecyclerAdapter
@@ -30,6 +33,10 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
         butoane()
     }
 
+    /**
+     * Buttons in this activity
+     * @param buttonSkipClapari user skips choosing boots
+     */
     private fun butoane() {
         buttonSkipClapari.setOnClickListener {
             val intent1 = Intent(this, BeteActivity::class.java)
@@ -44,6 +51,9 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
         }
     }
 
+    /**
+     * Extract boots from database
+     */
     private fun preiaClapariDinBD(){
         var sem : Boolean = false
         db.collection("clapari")
@@ -83,6 +93,9 @@ class ClapariActivity : AppCompatActivity(), ClapariRecyclerAdapter.OnItemClickL
 
     }
 
+    /**
+     * If item is clicked then go to boots info activity and pass required data
+     */
     override fun onItemClick(position: Int) {
         val clickedItem: Produs = listaClapari[position]
         clapariAdapter.notifyItemChanged(position)

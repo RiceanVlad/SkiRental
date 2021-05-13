@@ -11,6 +11,9 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_code_scaner.*
 
+/**
+ * Scan product to make it rent ready again
+ */
 class CodeScanerActivity : AppCompatActivity() {
 
 
@@ -24,6 +27,10 @@ class CodeScanerActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Buttons on this activity
+     * @param buttonScan initiate Barcode & QR scanner
+     */
     private fun butoane() {
         buttonScan.setOnClickListener {
             val scanner = IntentIntegrator(this)
@@ -32,6 +39,9 @@ class CodeScanerActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * If something is scanned then update product
+     */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == Activity.RESULT_OK) {
@@ -56,6 +66,9 @@ class CodeScanerActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Update product to make it rent ready in database
+     */
     private fun updateReturnat(colectie: String, cheie: String) {
         val db = FirebaseFirestore.getInstance()
         db.collection(colectie).document(cheie)

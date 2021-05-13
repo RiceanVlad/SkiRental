@@ -17,6 +17,9 @@ import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_afisare_produse.*
 import kotlinx.android.synthetic.main.confirmare_dialog.view.*
 
+/**
+ * Recycler view that displays all products from database ready to be deleted
+ */
 class AfisareProduseActivity : AppCompatActivity(),DeleteRecyclerAdapter.OnItemClickListener {
 
     private lateinit var binding: ActivityAfisareProduseBinding
@@ -33,6 +36,9 @@ class AfisareProduseActivity : AppCompatActivity(),DeleteRecyclerAdapter.OnItemC
          preiaProduseDinBD()
     }
 
+    /**
+     * Extract products from database
+     */
     private fun preiaProduseDinBD(){
         db.collection(intent.getStringExtra("tip").toString())
                 .get()
@@ -70,6 +76,9 @@ class AfisareProduseActivity : AppCompatActivity(),DeleteRecyclerAdapter.OnItemC
 
     }
 
+    /**
+     * When product is clicked the app asks administrator if he wants to delete the product or not
+     */
     override fun onItemClick(position: Int) {
         val clickedItem: ProdusFinal = listaProduse[position]
         val mDialogView = LayoutInflater.from(this).inflate(R.layout.confirmare_dialog,null)
