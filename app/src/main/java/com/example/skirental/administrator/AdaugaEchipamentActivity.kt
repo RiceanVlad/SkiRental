@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.R
 import kotlinx.android.synthetic.main.activity_adauga_echipament.*
 
+/**
+ * Choose what type of equipment to add in the database
+ */
 class AdaugaEchipamentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,6 +17,14 @@ class AdaugaEchipamentActivity : AppCompatActivity() {
         butoane()
     }
 
+    /**
+     * Buttons in this activity
+     * @param buttonAdaugaSchiuri add skis
+     * @param buttonAdaugaBete add poles
+     * @param buttonAdaugaCasti add helmet
+     * @param buttonAdaugaOchelari add goggles
+     * @param buttonAdaugaClapari add boots
+     */
     private fun butoane() { // 1 - schiuri + bete
         // 2 - ochelari + casca
         // 3 - clapari

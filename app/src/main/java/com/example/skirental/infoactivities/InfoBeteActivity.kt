@@ -10,6 +10,9 @@ import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_info_bete.*
 
+/**
+ * Show's information about the chosen poles
+ */
 class InfoBeteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInfoBeteBinding
@@ -28,6 +31,10 @@ class InfoBeteActivity : AppCompatActivity() {
         butoane()
     }
 
+    /**
+     * Buttons on this activity
+     * @param buttonAlegeBete set poles rent=true in database
+     */
     private fun butoane(){
         binding.buttonAlegeBete.setOnClickListener(){
             var intent1 = Intent(this, CascaActivity::class.java)

@@ -14,6 +14,9 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_formular_adaugare.*
 
+/**
+ * Add equipment in database
+ */
 class FormularAdaugareActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
@@ -30,6 +33,11 @@ class FormularAdaugareActivity : AppCompatActivity() {
         butoane()
     }
 
+    /**
+     * Buttons on this activity
+     * @param buttonAdaugaProdus add product in database based on it's type
+     * @param imageViewImagineProdus choose image from phone
+     */
     private fun butoane() {
         buttonAdaugaProdus.setOnClickListener {
 
@@ -53,6 +61,9 @@ class FormularAdaugareActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Add goggles to database
+     */
     private fun adaugaOchelari() {
         val ref = db.collection("ochelari")
 
@@ -73,6 +84,9 @@ class FormularAdaugareActivity : AppCompatActivity() {
         uploadFile(key,"ochelari")
     }
 
+    /**
+     * Add helmet to database
+     */
     private fun adaugaCasca() {
         val ref = db.collection("casti")
 
@@ -93,6 +107,9 @@ class FormularAdaugareActivity : AppCompatActivity() {
         uploadFile(key,"casti")
     }
 
+    /**
+     * Add poles to database
+     */
     private fun adaugaBete() {
         val ref = db.collection("bete")
 
@@ -109,6 +126,9 @@ class FormularAdaugareActivity : AppCompatActivity() {
         uploadFile(key,"bete")
     }
 
+    /**
+     * Add boots to database
+     */
     private fun adaugaClapari() {
         val ref = db.collection("clapari")
 
@@ -125,6 +145,9 @@ class FormularAdaugareActivity : AppCompatActivity() {
         uploadFile(key,"clapari")
     }
 
+    /**
+     * Add skis to database
+     */
     private fun adaugaSchiuri(){
         val ref = db.collection("schiuri")
 
@@ -141,6 +164,9 @@ class FormularAdaugareActivity : AppCompatActivity() {
         uploadFile(key,"schiuri")
     }
 
+    /**
+     * Set visible/invisible buttons/textViews based on type of product
+     */
     private fun seteazaVizibilitate() { // 1 - schiuri + bete
         // 2 - ochelari + casca
         // 3 - clapari
@@ -188,6 +214,9 @@ class FormularAdaugareActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Upload image to firebase storage
+     */
     private fun uploadFile(key : String, dir : String) {
         if(filepath!=null){
             var pd = ProgressDialog(this)
@@ -211,6 +240,9 @@ class FormularAdaugareActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Choose image from phone
+     */
     private fun startFileChooser() {
         var intent = Intent()
         intent.setType("image/*")

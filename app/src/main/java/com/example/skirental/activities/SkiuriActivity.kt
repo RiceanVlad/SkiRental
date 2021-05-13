@@ -16,6 +16,9 @@ import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_skiuri.*
 
+/**
+ * Recycler view for all the skis
+ */
 class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickListener {
 
     private lateinit var binding: ActivitySkiuriBinding
@@ -33,6 +36,10 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
         butoane()
     }
 
+    /**
+     * Buttons in this activity
+     * @param buttonSkipSchiuri user skips choosing skis
+     */
     private fun butoane() {
         buttonSkipSchiuri.setOnClickListener {
             val intent1 = Intent(this, ClapariActivity::class.java)
@@ -50,6 +57,9 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
         }
     }
 
+    /**
+     * Extract skis from database
+     */
     private fun preiaSchiuriDinBD(){
         var sem : Boolean = false
         db.collection("schiuri")
@@ -90,6 +100,9 @@ class SkiuriActivity : AppCompatActivity(), SkiuriRecyclerAdapter.OnItemClickLis
 
     }
 
+    /**
+     * If item is clicked then go to ski info activity and pass required data
+     */
     override fun onItemClick(position: Int) {
 
         val clickedItem: Produs = listaSkiuri[position]

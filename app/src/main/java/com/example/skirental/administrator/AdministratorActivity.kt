@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.R
 import kotlinx.android.synthetic.main.activity_administrator.*
 
+/**
+ * Administrator can add equipment, delete equipment or scan equipment
+ */
 class AdministratorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +18,12 @@ class AdministratorActivity : AppCompatActivity() {
         butoane()
     }
 
+    /**
+     * Buttons in this activity
+     * @param buttonAdaugaEchipament add equipment
+     * @param buttonStergeEchipament delete equipment
+     * @param buttonReturnareProdus return equipment
+     */
     private fun butoane() {
         buttonAdaugaEchipament.setOnClickListener{
             val intent = Intent(this,AdaugaEchipamentActivity::class.java)

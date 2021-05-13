@@ -10,6 +10,9 @@ import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import java.io.Serializable
 
+/**
+ * Show's information about the chosen skis
+ */
 class InfoSkiuriActivity : AppCompatActivity(), Serializable {
 
     private lateinit var binding: ActivityInfoSkiuriBinding
@@ -27,6 +30,10 @@ class InfoSkiuriActivity : AppCompatActivity(), Serializable {
         butoane()
     }
 
+    /**
+     * Buttons on this activity
+     * @param buttonAlegeSkiuri set skis rent=true in database
+     */
     private fun butoane(){
         binding.buttonAlegeSkiuri.setOnClickListener(){
             val intent1 = Intent(this, ClapariActivity::class.java)

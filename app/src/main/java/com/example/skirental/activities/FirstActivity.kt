@@ -5,6 +5,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.skirental.databinding.ActivityFirstBinding
 
+/**
+ * Use can choose to rent a ski equipemnt or to modify his personal data
+ */
 class FirstActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFirstBinding
@@ -18,6 +21,11 @@ class FirstActivity : AppCompatActivity() {
         butoane()
     }
 
+    /**
+     * Function to store all the buttons
+     * @param buttonRentSkiEquipment User rents ski equipment
+     * @param buttonModificareDatePersonale User modifies his personal data
+     */
     private fun butoane(){
         binding.buttonRentSkiEquipment.setOnClickListener(){
             val intent1 = Intent(this, SkiuriActivity::class.java)

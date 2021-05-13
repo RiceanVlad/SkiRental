@@ -15,6 +15,9 @@ import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_ochelari.*
 
+/**
+ * Recycler view for all the goggles
+ */
 class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClickListener {
 
     private lateinit var ochelariAdapter: OchelariRecyclerAdapter
@@ -30,6 +33,10 @@ class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClic
         butoane()
     }
 
+    /**
+     * Buttons in this activity
+     * @param buttonSkipOchelari user skips choosing goggles
+     */
     private fun butoane() {
         buttonSkipOchelari.setOnClickListener {
             val intent1 = Intent(this, ProdusActivity::class.java)
@@ -47,6 +54,9 @@ class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClic
         }
     }
 
+    /**
+     * Extract goggles from database
+     */
     private fun preiaOchelariDinBD(){
         val sem : Boolean = false
         var adult : Boolean
@@ -95,6 +105,9 @@ class OchelariActivity : AppCompatActivity(), OchelariRecyclerAdapter.OnItemClic
 
     }
 
+    /**
+     * If item is clicked then go to goggles info activity and pass required data
+     */
     override fun onItemClick(position: Int) {
         val clickedItem: Produs = listaOchelari[position]
         ochelariAdapter.notifyItemChanged(position)

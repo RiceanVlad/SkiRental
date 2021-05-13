@@ -10,6 +10,9 @@ import com.example.skirental.models.Produs
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_info_ochelari.*
 
+/**
+ * Show's information about the chosen goggles
+ */
 class InfoOchelariActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInfoOchelariBinding
@@ -28,6 +31,10 @@ class InfoOchelariActivity : AppCompatActivity() {
         butoane()
     }
 
+    /**
+     * Buttons on this activity
+     * @param buttonAlegeOchelari set goggles rent=true in database
+     */
     private fun butoane(){
         binding.buttonAlegeOchelari.setOnClickListener(){
             var intent1 = Intent(this, ProdusActivity::class.java)
