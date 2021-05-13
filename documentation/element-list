@@ -1,0 +1,24 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.skirental.adapters/BeteRecyclerAdapter.BeteViewHolder///PointingToDeclaration/com/example/skirental/adapters/BeteRecyclerAdapter.BeteViewHolder.html
+$dokka.location:com.example.skirental.adapters/BeteRecyclerAdapter.OnItemClickListener///PointingToDeclaration/com/example/skirental/adapters/BeteRecyclerAdapter.OnItemClickListener.html
+$dokka.location:com.example.skirental.adapters/CascaRecyclerAdapter.CascaViewHolder///PointingToDeclaration/com/example/skirental/adapters/CascaRecyclerAdapter.CascaViewHolder.html
+$dokka.location:com.example.skirental.adapters/CascaRecyclerAdapter.OnItemClickListener///PointingToDeclaration/com/example/skirental/adapters/CascaRecyclerAdapter.OnItemClickListener.html
+$dokka.location:com.example.skirental.adapters/ClapariRecyclerAdapter.ClapariViewHolder///PointingToDeclaration/com/example/skirental/adapters/ClapariRecyclerAdapter.ClapariViewHolder.html
+$dokka.location:com.example.skirental.adapters/ClapariRecyclerAdapter.OnItemClickListener///PointingToDeclaration/com/example/skirental/adapters/ClapariRecyclerAdapter.OnItemClickListener.html
+$dokka.location:com.example.skirental.adapters/OchelariRecyclerAdapter.OchelariViewHolder///PointingToDeclaration/com/example/skirental/adapters/OchelariRecyclerAdapter.OchelariViewHolder.html
+$dokka.location:com.example.skirental.adapters/OchelariRecyclerAdapter.OnItemClickListener///PointingToDeclaration/com/example/skirental/adapters/OchelariRecyclerAdapter.OnItemClickListener.html
+$dokka.location:com.example.skirental.adapters/ProdusRecyclerAdapter.OnItemClickListener///PointingToDeclaration/com/example/skirental/adapters/ProdusRecyclerAdapter.OnItemClickListener.html
+$dokka.location:com.example.skirental.adapters/ProdusRecyclerAdapter.ProdusViewHolder///PointingToDeclaration/com/example/skirental/adapters/ProdusRecyclerAdapter.ProdusViewHolder.html
+$dokka.location:com.example.skirental.adapters/SkiuriRecyclerAdapter.OnItemClickListener///PointingToDeclaration/com/example/skirental/adapters/SkiuriRecyclerAdapter.OnItemClickListener.html
+$dokka.location:com.example.skirental.adapters/SkiuriRecyclerAdapter.SkiuriViewHolder///PointingToDeclaration/com/example/skirental/adapters/SkiuriRecyclerAdapter.SkiuriViewHolder.html
+$dokka.location:com.example.skirental.administrator/DeleteRecyclerAdapter.OnItemClickListener///PointingToDeclaration/com/example/skirental/administrator/DeleteRecyclerAdapter.OnItemClickListener.html
+$dokka.location:com.example.skirental.administrator/DeleteRecyclerAdapter.ProdusViewHolder///PointingToDeclaration/com/example/skirental/administrator/DeleteRecyclerAdapter.ProdusViewHolder.html
+com.example.skirental
+com.example.skirental.activities
+com.example.skirental.adapters
+com.example.skirental.administrator
+com.example.skirental.infoactivities
+com.example.skirental.miscellaneous
+com.example.skirental.models
+
