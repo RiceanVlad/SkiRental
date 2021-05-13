@@ -151,7 +151,9 @@ Here i will post some screenshots to ilustrate how the app works.
 ![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan2.png?raw=true)
 ![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan1.png?raw=true)
 
-## Extra Documentation
+## Documentation
+
+wqe
 
 <!-- CONTRIBUTING -->
 ## Contributing
