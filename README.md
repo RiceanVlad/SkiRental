@@ -170,7 +170,9 @@ Contributions are what make the open source community such an amazing place to b
 ## Conclusions and future work
 
 On the future I'm planning to be able to rent equipment based on a specific date.
+
 I'm also thinking into implementing give away gift cards for some customers.
+
 Possibly implement percentage usage of equipment.
 
 <!-- CONTACT -->
