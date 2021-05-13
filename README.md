@@ -188,7 +188,7 @@ Ricean Ioan-Vlad - [ioan.ricean95@e-uvt.ro](ioan.ricean95@e-uvt.ro)
 
 Project Link: [https://github.com/RiceanVlad/SkiRental](https://github.com/RiceanVlad/SkiRental)
 
-School subject: Programming on Mobile Devices
+School subject: Programming for Mobile Devices
 
 Date of dispatch: 13.05.2021
 
