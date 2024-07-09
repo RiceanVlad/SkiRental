@@ -78,6 +78,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<p style="color:red;">Note that this is an old project, it is not built with clean standards in mind, every screen is an Activity :]</p>
+
 I was looking for renting ski equipment mobile apps and couldn't find any so i made my own. The Ski Rental app is about renting ski equipment before you arrive at some ski resort, so they have the equipment up and ready for your arrival.
 
 Here's why:
